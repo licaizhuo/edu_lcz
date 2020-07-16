@@ -114,7 +114,12 @@
                     this.$message.error("手机号不符合规范")
                 }
             }
-        }
+        },
+        created() {
+            if (this.$cookies.get('token')) {
+                this.$router.push('/')
+            }
+        },
     }
 </script>
 

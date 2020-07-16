@@ -4512,3 +4512,281 @@ INFO 2020-07-14 22:13:38,835 basehttp 124 "GET /course/chapter/?course_id=1 HTTP
 INFO 2020-07-14 22:13:39,146 basehttp 124 "GET /media/teacher/u658541976924031719fm85app92fJPEG.jpg HTTP/1.1" 304 0
 INFO 2020-07-14 22:13:54,608 basehttp 124 "GET /media/video/1.mp4 HTTP/1.1" 200 4751360
 ERROR 2020-07-14 22:13:54,610 basehttp 124 "GET /media/video/1.mp4 HTTP/1.1" 500 59
+INFO 2020-07-15 14:11:05,595 basehttp 124 "GET /home/footer/ HTTP/1.1" 200 493
+INFO 2020-07-15 14:11:05,605 basehttp 124 "GET /home/header/ HTTP/1.1" 200 387
+INFO 2020-07-15 14:11:05,613 basehttp 124 "GET /home/banner/ HTTP/1.1" 200 352
+INFO 2020-07-15 14:11:29,996 basehttp 124 "GET /home/banner/ HTTP/1.1" 200 352
+INFO 2020-07-15 14:11:29,997 basehttp 124 "GET /home/header/ HTTP/1.1" 200 387
+INFO 2020-07-15 14:11:30,006 basehttp 124 "GET /home/footer/ HTTP/1.1" 200 493
+INFO 2020-07-15 14:12:31,627 basehttp 124 "GET /home/header/ HTTP/1.1" 200 387
+INFO 2020-07-15 14:12:36,053 basehttp 124 "GET /home/header/ HTTP/1.1" 200 387
+INFO 2020-07-15 14:12:36,063 basehttp 124 "GET /home/banner/ HTTP/1.1" 200 352
+INFO 2020-07-15 14:12:36,092 basehttp 124 "GET /home/footer/ HTTP/1.1" 200 493
+INFO 2020-07-15 14:12:41,968 basehttp 124 "GET /course/category/ HTTP/1.1" 200 220
+INFO 2020-07-15 14:12:42,002 basehttp 124 "GET /home/header/ HTTP/1.1" 200 387
+INFO 2020-07-15 14:12:42,017 basehttp 124 "GET /course/list_filter/?page=1&size=3&ordering=-id HTTP/1.1" 200 1044
+INFO 2020-07-15 14:12:42,055 basehttp 124 "GET /home/footer/ HTTP/1.1" 200 493
+INFO 2020-07-15 14:12:42,261 basehttp 124 "GET /media/course/788dbf38-076d-4d1e-b7cc-4b69a5abbf35.png HTTP/1.1" 200 81807
+INFO 2020-07-15 14:12:42,268 basehttp 124 "GET /media/course/74e724d3-5ee5-40aa-a4bf-98f866ca15ab.jpg HTTP/1.1" 200 33637
+INFO 2020-07-15 14:12:42,274 basehttp 124 "GET /media/course/a3dd8fd0-d395-4566-a573-a0e3f60d5f85.jpg HTTP/1.1" 200 96987
+INFO 2020-07-15 14:12:47,811 basehttp 124 "GET /home/header/ HTTP/1.1" 200 387
+INFO 2020-07-15 14:12:47,828 basehttp 124 "GET /course/chapter/?course_id=29 HTTP/1.1" 200 2
+INFO 2020-07-15 14:12:47,829 basehttp 124 "GET /home/footer/ HTTP/1.1" 200 493
+INFO 2020-07-15 14:12:47,829 basehttp 124 "GET /course/course_info/29/ HTTP/1.1" 200 507
+INFO 2020-07-15 14:12:48,011 basehttp 124 "GET /media/teacher/u658541976924031719fm85app92fJPEG.jpg HTTP/1.1" 200 2545
+INFO 2020-07-15 14:12:59,102 basehttp 124 "GET /course/category/ HTTP/1.1" 200 220
+INFO 2020-07-15 14:12:59,124 basehttp 124 "GET /home/header/ HTTP/1.1" 200 387
+INFO 2020-07-15 14:12:59,149 basehttp 124 "GET /course/list_filter/?page=1&size=3&ordering=-id HTTP/1.1" 200 1044
+INFO 2020-07-15 14:12:59,180 basehttp 124 "GET /home/footer/ HTTP/1.1" 200 493
+INFO 2020-07-15 14:13:14,732 basehttp 124 "GET /course/category/ HTTP/1.1" 200 220
+INFO 2020-07-15 14:13:14,770 basehttp 124 "GET /home/header/ HTTP/1.1" 200 387
+INFO 2020-07-15 14:13:14,787 basehttp 124 "GET /course/list_filter/?page=1&size=3&ordering=-id HTTP/1.1" 200 1044
+INFO 2020-07-15 14:13:14,833 basehttp 124 "GET /home/footer/ HTTP/1.1" 200 493
+INFO 2020-07-15 14:13:50,195 basehttp 124 "GET /course/chapter/?course_id=29 HTTP/1.1" 200 2
+INFO 2020-07-15 14:13:50,211 basehttp 124 "GET /course/course_info/29/ HTTP/1.1" 200 507
+INFO 2020-07-15 14:13:50,217 basehttp 124 "GET /home/header/ HTTP/1.1" 200 387
+INFO 2020-07-15 14:13:50,222 basehttp 124 "GET /home/footer/ HTTP/1.1" 200 493
+INFO 2020-07-15 14:14:40,385 basehttp 124 "GET /course/category/ HTTP/1.1" 200 220
+INFO 2020-07-15 14:14:40,390 basehttp 124 "GET /home/header/ HTTP/1.1" 200 387
+INFO 2020-07-15 14:14:40,433 basehttp 124 "GET /course/list_filter/?page=1&size=3&ordering=-id HTTP/1.1" 200 1044
+INFO 2020-07-15 14:14:40,458 basehttp 124 "GET /home/footer/ HTTP/1.1" 200 493
+INFO 2020-07-15 14:14:41,753 basehttp 124 "GET /home/header/ HTTP/1.1" 200 387
+INFO 2020-07-15 14:14:41,759 basehttp 124 "GET /home/banner/ HTTP/1.1" 200 352
+INFO 2020-07-15 14:14:41,777 basehttp 124 "GET /home/footer/ HTTP/1.1" 200 493
+INFO 2020-07-15 14:14:43,885 basehttp 124 "GET /course/category/ HTTP/1.1" 200 220
+INFO 2020-07-15 14:14:43,941 basehttp 124 "GET /course/list_filter/?page=1&size=3&ordering=-id HTTP/1.1" 200 1044
+INFO 2020-07-15 14:14:43,959 basehttp 124 "GET /home/header/ HTTP/1.1" 200 387
+INFO 2020-07-15 14:14:43,983 basehttp 124 "GET /home/footer/ HTTP/1.1" 200 493
+INFO 2020-07-15 14:14:45,479 basehttp 124 "GET /home/header/ HTTP/1.1" 200 387
+INFO 2020-07-15 14:14:45,487 basehttp 124 "GET /home/banner/ HTTP/1.1" 200 352
+INFO 2020-07-15 14:14:45,519 basehttp 124 "GET /home/footer/ HTTP/1.1" 200 493
+INFO 2020-07-15 14:14:47,737 basehttp 124 "GET /course/category/ HTTP/1.1" 200 220
+INFO 2020-07-15 14:14:47,803 basehttp 124 "GET /course/list_filter/?page=1&size=3&ordering=-id HTTP/1.1" 200 1044
+INFO 2020-07-15 14:14:47,814 basehttp 124 "GET /home/header/ HTTP/1.1" 200 387
+INFO 2020-07-15 14:14:47,815 basehttp 124 "GET /home/footer/ HTTP/1.1" 200 493
+INFO 2020-07-15 14:16:30,271 basehttp 124 "GET /home/header/ HTTP/1.1" 200 387
+INFO 2020-07-15 14:16:30,279 basehttp 124 "GET /home/banner/ HTTP/1.1" 200 352
+INFO 2020-07-15 14:16:30,280 basehttp 124 "GET /home/footer/ HTTP/1.1" 200 493
+INFO 2020-07-15 14:16:49,781 basehttp 124 "GET /home/header/ HTTP/1.1" 200 387
+INFO 2020-07-15 14:16:49,871 basehttp 124 "GET /home/banner/ HTTP/1.1" 200 352
+INFO 2020-07-15 14:16:50,043 basehttp 124 "GET /home/footer/ HTTP/1.1" 200 493
+INFO 2020-07-15 14:16:51,535 basehttp 124 "GET /course/category/ HTTP/1.1" 200 220
+INFO 2020-07-15 14:16:51,551 basehttp 124 "GET /home/header/ HTTP/1.1" 200 387
+INFO 2020-07-15 14:16:51,577 basehttp 124 "GET /home/footer/ HTTP/1.1" 200 493
+INFO 2020-07-15 14:16:51,577 basehttp 124 "GET /course/list_filter/?page=1&size=3&ordering=-id HTTP/1.1" 200 1044
+INFO 2020-07-15 14:16:53,540 basehttp 124 "GET /course/course_info/29/ HTTP/1.1" 200 507
+INFO 2020-07-15 14:16:53,669 basehttp 124 "GET /course/chapter/?course_id=29 HTTP/1.1" 200 2
+INFO 2020-07-15 14:16:53,755 basehttp 124 "GET /home/footer/ HTTP/1.1" 200 493
+INFO 2020-07-15 14:16:53,836 basehttp 124 "GET /home/header/ HTTP/1.1" 200 387
+INFO 2020-07-15 14:19:24,315 basehttp 124 "GET /home/header/ HTTP/1.1" 200 387
+INFO 2020-07-15 14:19:38,876 basehttp 124 "GET /course/course_info/29/ HTTP/1.1" 200 507
+INFO 2020-07-15 14:19:38,947 basehttp 124 "GET /course/chapter/?course_id=29 HTTP/1.1" 200 2
+INFO 2020-07-15 14:19:39,073 basehttp 124 "GET /home/header/ HTTP/1.1" 200 387
+INFO 2020-07-15 14:19:39,137 basehttp 124 "GET /home/footer/ HTTP/1.1" 200 493
+INFO 2020-07-15 14:20:19,613 basehttp 124 "GET /home/header/ HTTP/1.1" 200 387
+INFO 2020-07-15 14:20:19,648 basehttp 124 "GET /home/footer/ HTTP/1.1" 200 493
+INFO 2020-07-15 14:20:19,655 basehttp 124 "GET /course/category/ HTTP/1.1" 200 220
+INFO 2020-07-15 14:20:19,658 basehttp 124 "GET /course/list_filter/?page=1&size=3&ordering=-id HTTP/1.1" 200 1044
+INFO 2020-07-15 14:20:20,248 basehttp 124 "GET /home/header/ HTTP/1.1" 200 387
+INFO 2020-07-15 14:20:20,271 basehttp 124 "GET /home/banner/ HTTP/1.1" 200 352
+INFO 2020-07-15 14:20:20,294 basehttp 124 "GET /home/footer/ HTTP/1.1" 200 493
+INFO 2020-07-15 14:20:27,941 basehttp 124 "GET /home/header/ HTTP/1.1" 200 387
+INFO 2020-07-15 14:20:27,958 basehttp 124 "GET /home/banner/ HTTP/1.1" 200 352
+INFO 2020-07-15 14:20:27,968 basehttp 124 "GET /home/footer/ HTTP/1.1" 200 493
+INFO 2020-07-15 14:20:43,111 basehttp 124 "GET /home/header/ HTTP/1.1" 200 387
+INFO 2020-07-15 14:20:43,121 basehttp 124 "GET /home/banner/ HTTP/1.1" 200 352
+INFO 2020-07-15 14:20:43,129 basehttp 124 "GET /home/footer/ HTTP/1.1" 200 493
+INFO 2020-07-15 14:21:11,827 basehttp 124 "GET /home/header/ HTTP/1.1" 200 387
+INFO 2020-07-15 14:21:11,835 basehttp 124 "GET /home/banner/ HTTP/1.1" 200 352
+INFO 2020-07-15 14:21:11,844 basehttp 124 "GET /home/footer/ HTTP/1.1" 200 493
+INFO 2020-07-15 14:21:13,290 basehttp 124 "GET /course/category/ HTTP/1.1" 200 220
+INFO 2020-07-15 14:21:13,344 basehttp 124 "GET /course/list_filter/?page=1&size=3&ordering=-id HTTP/1.1" 200 1044
+INFO 2020-07-15 14:21:13,350 basehttp 124 "GET /home/header/ HTTP/1.1" 200 387
+INFO 2020-07-15 14:21:13,357 basehttp 124 "GET /home/footer/ HTTP/1.1" 200 493
+INFO 2020-07-15 14:21:18,531 basehttp 124 "GET /course/course_info/29/ HTTP/1.1" 200 507
+INFO 2020-07-15 14:21:18,541 basehttp 124 "GET /course/chapter/?course_id=29 HTTP/1.1" 200 2
+INFO 2020-07-15 14:21:18,546 basehttp 124 "GET /home/header/ HTTP/1.1" 200 387
+INFO 2020-07-15 14:21:18,552 basehttp 124 "GET /home/footer/ HTTP/1.1" 200 493
+INFO 2020-07-15 14:21:31,016 basehttp 124 "GET /course/category/ HTTP/1.1" 200 220
+INFO 2020-07-15 14:21:31,061 basehttp 124 "GET /home/header/ HTTP/1.1" 200 387
+INFO 2020-07-15 14:21:31,067 basehttp 124 "GET /home/footer/ HTTP/1.1" 200 493
+INFO 2020-07-15 14:21:31,098 basehttp 124 "GET /course/list_filter/?page=1&size=3&ordering=-id HTTP/1.1" 200 1044
+INFO 2020-07-15 14:21:32,186 basehttp 124 "GET /home/header/ HTTP/1.1" 200 387
+INFO 2020-07-15 14:21:32,197 basehttp 124 "GET /course/category/ HTTP/1.1" 200 220
+INFO 2020-07-15 14:21:32,237 basehttp 124 "GET /course/list_filter/?page=1&size=3&ordering=-id HTTP/1.1" 200 1044
+INFO 2020-07-15 14:21:32,243 basehttp 124 "GET /home/footer/ HTTP/1.1" 200 493
+INFO 2020-07-15 14:21:34,635 basehttp 124 "GET /course/course_info/29/ HTTP/1.1" 200 507
+INFO 2020-07-15 14:21:34,644 basehttp 124 "GET /course/chapter/?course_id=29 HTTP/1.1" 200 2
+INFO 2020-07-15 14:21:34,682 basehttp 124 "GET /home/header/ HTTP/1.1" 200 387
+INFO 2020-07-15 14:21:34,733 basehttp 124 "GET /home/footer/ HTTP/1.1" 200 493
+INFO 2020-07-15 14:21:35,639 basehttp 124 "GET /course/category/ HTTP/1.1" 200 220
+INFO 2020-07-15 14:21:35,668 basehttp 124 "GET /home/footer/ HTTP/1.1" 200 493
+INFO 2020-07-15 14:21:35,669 basehttp 124 "GET /home/header/ HTTP/1.1" 200 387
+INFO 2020-07-15 14:21:35,685 basehttp 124 "GET /course/list_filter/?page=1&size=3&ordering=-id HTTP/1.1" 200 1044
+INFO 2020-07-15 14:21:53,884 basehttp 124 "GET /home/header/ HTTP/1.1" 200 387
+INFO 2020-07-15 14:22:20,975 basehttp 124 "GET /course/category/ HTTP/1.1" 200 220
+INFO 2020-07-15 14:22:20,985 basehttp 124 "GET /home/header/ HTTP/1.1" 200 387
+INFO 2020-07-15 14:22:21,003 basehttp 124 "GET /home/footer/ HTTP/1.1" 200 493
+INFO 2020-07-15 14:22:21,012 basehttp 124 "GET /course/list_filter/?page=1&size=3&ordering=-id HTTP/1.1" 200 1044
+INFO 2020-07-15 16:06:35,929 basehttp 124 "GET /course/chapter/?course_id=29 HTTP/1.1" 200 2
+INFO 2020-07-15 16:06:35,934 basehttp 124 "GET /course/course_info/29/ HTTP/1.1" 200 507
+INFO 2020-07-15 16:06:35,937 basehttp 124 "GET /home/header/ HTTP/1.1" 200 387
+INFO 2020-07-15 16:06:35,938 basehttp 124 "GET /home/footer/ HTTP/1.1" 200 493
+INFO 2020-07-15 16:06:36,022 basehttp 124 "GET /media/teacher/u658541976924031719fm85app92fJPEG.jpg HTTP/1.1" 304 0
+INFO 2020-07-15 16:06:42,725 basehttp 124 "GET /course/category/ HTTP/1.1" 200 220
+INFO 2020-07-15 16:06:42,742 basehttp 124 "GET /home/header/ HTTP/1.1" 200 387
+INFO 2020-07-15 16:06:42,769 basehttp 124 "GET /course/list_filter/?page=1&size=3&ordering=-id HTTP/1.1" 200 1044
+INFO 2020-07-15 16:06:42,775 basehttp 124 "GET /home/footer/ HTTP/1.1" 200 493
+INFO 2020-07-15 16:06:48,014 basehttp 124 "GET /course/list_filter/?page=3&size=3&ordering=-id HTTP/1.1" 200 1142
+WARNING 2020-07-15 16:06:48,135 base 93 Not Found: /media/course/2452c9d2-3539-447b-a98a-99378a750dee.png
+WARNING 2020-07-15 16:06:48,139 basehttp 124 "GET /media/course/2452c9d2-3539-447b-a98a-99378a750dee.png HTTP/1.1" 404 1919
+INFO 2020-07-15 16:06:57,769 basehttp 124 "GET /course/category/ HTTP/1.1" 200 220
+INFO 2020-07-15 16:06:57,798 basehttp 124 "GET /home/header/ HTTP/1.1" 200 387
+INFO 2020-07-15 16:06:57,799 basehttp 124 "GET /home/footer/ HTTP/1.1" 200 493
+INFO 2020-07-15 16:06:57,802 basehttp 124 "GET /course/list_filter/?page=1&size=3&ordering=-id HTTP/1.1" 200 1044
+INFO 2020-07-15 16:06:58,099 basehttp 124 "GET /media/course/788dbf38-076d-4d1e-b7cc-4b69a5abbf35.png HTTP/1.1" 304 0
+INFO 2020-07-15 16:06:58,113 basehttp 124 "GET /media/course/74e724d3-5ee5-40aa-a4bf-98f866ca15ab.jpg HTTP/1.1" 304 0
+INFO 2020-07-15 16:06:58,123 basehttp 124 "GET /media/course/a3dd8fd0-d395-4566-a573-a0e3f60d5f85.jpg HTTP/1.1" 304 0
+INFO 2020-07-15 16:07:02,041 basehttp 124 "GET /course/course_info/29/ HTTP/1.1" 200 507
+INFO 2020-07-15 16:07:02,074 basehttp 124 "GET /course/chapter/?course_id=29 HTTP/1.1" 200 2
+INFO 2020-07-15 16:07:02,079 basehttp 124 "GET /home/header/ HTTP/1.1" 200 387
+INFO 2020-07-15 16:07:02,086 basehttp 124 "GET /home/footer/ HTTP/1.1" 200 493
+INFO 2020-07-15 16:07:03,960 basehttp 124 "GET /course/category/ HTTP/1.1" 200 220
+INFO 2020-07-15 16:07:04,009 basehttp 124 "GET /home/header/ HTTP/1.1" 200 387
+INFO 2020-07-15 16:07:04,010 basehttp 124 "GET /home/footer/ HTTP/1.1" 200 493
+INFO 2020-07-15 16:07:04,010 basehttp 124 "GET /course/list_filter/?page=1&size=3&ordering=-id HTTP/1.1" 200 1044
+INFO 2020-07-15 16:07:05,424 basehttp 124 "GET /course/chapter/?course_id=28 HTTP/1.1" 200 2
+INFO 2020-07-15 16:07:05,430 basehttp 124 "GET /home/header/ HTTP/1.1" 200 387
+INFO 2020-07-15 16:07:05,431 basehttp 124 "GET /course/course_info/28/ HTTP/1.1" 200 454
+INFO 2020-07-15 16:07:05,442 basehttp 124 "GET /home/footer/ HTTP/1.1" 200 493
+INFO 2020-07-15 16:07:07,212 basehttp 124 "GET /course/category/ HTTP/1.1" 200 220
+INFO 2020-07-15 16:07:07,240 basehttp 124 "GET /home/header/ HTTP/1.1" 200 387
+INFO 2020-07-15 16:07:07,249 basehttp 124 "GET /course/list_filter/?page=1&size=3&ordering=-id HTTP/1.1" 200 1044
+INFO 2020-07-15 16:07:07,258 basehttp 124 "GET /home/footer/ HTTP/1.1" 200 493
+INFO 2020-07-15 16:07:09,741 basehttp 124 "GET /course/list_filter/?page=1&size=3&ordering=id HTTP/1.1" 200 1337
+WARNING 2020-07-15 16:07:09,761 base 93 Not Found: /media/course/course-cover.jpeg
+WARNING 2020-07-15 16:07:09,766 base 93 Not Found: /media/course/2.jpeg
+WARNING 2020-07-15 16:07:09,771 basehttp 124 "GET /media/course/2.jpeg HTTP/1.1" 404 1817
+WARNING 2020-07-15 16:07:09,767 basehttp 124 "GET /media/course/course-cover.jpeg HTTP/1.1" 404 1850
+INFO 2020-07-15 16:07:09,877 basehttp 124 "GET /media/course/u14893951613940764251fm26gp0.jpg HTTP/1.1" 200 20960
+INFO 2020-07-15 16:07:11,567 basehttp 124 "GET /course/course_info/1/ HTTP/1.1" 200 1117
+INFO 2020-07-15 16:07:11,571 basehttp 124 "GET /home/header/ HTTP/1.1" 200 387
+INFO 2020-07-15 16:07:11,575 basehttp 124 "GET /home/footer/ HTTP/1.1" 200 493
+INFO 2020-07-15 16:07:11,610 basehttp 124 "GET /course/chapter/?course_id=1 HTTP/1.1" 200 629
+INFO 2020-07-15 16:07:18,503 basehttp 124 "GET /media/2020/07/14/u14893951613940764251fm26gp0.jpg HTTP/1.1" 200 20960
+INFO 2020-07-15 16:07:18,518 basehttp 124 "GET /static/ckeditor/ckeditor/plugins/smiley/images/teeth_smile.png HTTP/1.1" 304 0
+ERROR 2020-07-15 18:06:07,228 basehttp 124 "GET /media/video/1.mp4 HTTP/1.1" 500 59
+ERROR 2020-07-15 18:06:51,280 basehttp 124 "GET /media/video/1.mp4 HTTP/1.1" 500 59
+ERROR 2020-07-15 18:08:35,152 basehttp 124 "GET /media/video/1.mp4 HTTP/1.1" 500 59
+ERROR 2020-07-15 18:09:56,181 basehttp 124 "GET /media/video/1.mp4 HTTP/1.1" 500 59
+ERROR 2020-07-15 18:10:24,571 basehttp 124 "GET /media/video/1.mp4 HTTP/1.1" 500 59
+ERROR 2020-07-15 18:11:52,174 basehttp 124 "GET /media/video/1.mp4 HTTP/1.1" 500 59
+ERROR 2020-07-15 18:14:09,324 basehttp 124 "GET /media/video/1.mp4 HTTP/1.1" 500 59
+ERROR 2020-07-15 18:15:07,193 basehttp 124 "GET /media/video/1.mp4 HTTP/1.1" 500 59
+ERROR 2020-07-15 18:27:40,445 basehttp 124 "GET /media/video/1.mp4 HTTP/1.1" 500 59
+ERROR 2020-07-15 18:27:58,482 basehttp 124 "GET /media/video/1.mp4 HTTP/1.1" 500 59
+ERROR 2020-07-15 18:34:56,163 basehttp 124 "GET /media/video/1.mp4 HTTP/1.1" 500 59
+ERROR 2020-07-15 18:35:13,547 basehttp 124 "GET /media/video/1.mp4 HTTP/1.1" 500 59
+ERROR 2020-07-15 18:36:42,541 basehttp 124 "GET /media/video/1.mp4 HTTP/1.1" 500 59
+ERROR 2020-07-15 18:37:01,642 basehttp 124 "GET /media/video/1.mp4 HTTP/1.1" 500 59
+ERROR 2020-07-15 18:37:28,060 basehttp 124 "GET /media/video/1.mp4 HTTP/1.1" 500 59
+ERROR 2020-07-15 18:38:15,295 basehttp 124 "GET /media/video/1.mp4 HTTP/1.1" 500 59
+ERROR 2020-07-15 18:38:16,934 basehttp 124 "GET /media/video/1.mp4 HTTP/1.1" 500 59
+ERROR 2020-07-15 18:38:34,671 basehttp 124 "GET /media/video/1.mp4 HTTP/1.1" 500 59
+WARNING 2020-07-15 18:38:38,075 basehttp 124 "POST /cart/option/ HTTP/1.1" 401 38
+ERROR 2020-07-15 18:38:52,240 exceptions 15 <cart.views.CartViewSet object at 0x0000029C8590ABA8>--POST--get() returned more than one Course -- it returned 18!
+ERROR 2020-07-15 18:38:52,242 basehttp 124 "POST /cart/option/ HTTP/1.1" 500 67
+ERROR 2020-07-15 18:39:05,292 basehttp 124 "GET /media/video/1.mp4 HTTP/1.1" 500 59
+ERROR 2020-07-15 18:40:01,232 basehttp 124 "GET /media/video/1.mp4 HTTP/1.1" 500 59
+ERROR 2020-07-15 18:40:46,079 exceptions 15 <cart.views.CartViewSet object at 0x0000029C85890E48>--POST--get() returned more than one Course -- it returned 18!
+ERROR 2020-07-15 18:40:46,079 basehttp 124 "POST /cart/option/ HTTP/1.1" 500 67
+ERROR 2020-07-15 18:40:51,680 exceptions 15 <cart.views.CartViewSet object at 0x0000029C85893C88>--POST--get() returned more than one Course -- it returned 18!
+ERROR 2020-07-15 18:40:51,682 basehttp 124 "POST /cart/option/ HTTP/1.1" 500 67
+ERROR 2020-07-15 18:40:59,124 basehttp 124 "GET /media/video/1.mp4 HTTP/1.1" 500 59
+ERROR 2020-07-15 18:41:37,986 exceptions 15 <cart.views.CartViewSet object at 0x0000029C858BB668>--POST--get() returned more than one Course -- it returned 18!
+ERROR 2020-07-15 18:41:37,987 basehttp 124 "POST /cart/option/ HTTP/1.1" 500 67
+WARNING 2020-07-15 18:42:17,021 base 93 Not Found: /favicon.ico
+WARNING 2020-07-15 18:42:17,023 basehttp 124 "GET /favicon.ico HTTP/1.1" 404 2643
+WARNING 2020-07-15 18:42:30,082 basehttp 124 "GET /cart/option/ HTTP/1.1" 405 5643
+WARNING 2020-07-15 18:43:52,989 basehttp 124 "GET /cart/option/ HTTP/1.1" 405 45
+ERROR 2020-07-15 18:43:56,311 exception 118 Internal Server Error: /cart/option/
+Traceback (most recent call last):
+  File "E:\python_virtualenv\edu_baizhi\lib\site-packages\django\core\handlers\exception.py", line 35, in inner
+    response = get_response(request)
+  File "E:\python_virtualenv\edu_baizhi\lib\site-packages\django\core\handlers\base.py", line 128, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "E:\python_virtualenv\edu_baizhi\lib\site-packages\django\core\handlers\base.py", line 126, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "E:\python_virtualenv\edu_baizhi\lib\site-packages\django\views\decorators\csrf.py", line 54, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "E:\python_virtualenv\edu_baizhi\lib\site-packages\rest_framework\viewsets.py", line 114, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "E:\python_virtualenv\edu_baizhi\lib\site-packages\rest_framework\views.py", line 499, in dispatch
+    self.response = self.finalize_response(request, response, *args, **kwargs)
+  File "E:\python_virtualenv\edu_baizhi\lib\site-packages\rest_framework\views.py", line 414, in finalize_response
+    % type(response)
+AssertionError: Expected a `Response`, `HttpResponse` or `HttpStreamingResponse` to be returned from the view, but received a `<class 'NoneType'>`
+ERROR 2020-07-15 18:43:56,635 basehttp 124 "POST /cart/option/ HTTP/1.1" 500 84905
+ERROR 2020-07-15 18:45:03,294 exception 118 Internal Server Error: /cart/option/
+Traceback (most recent call last):
+  File "E:\python_virtualenv\edu_baizhi\lib\site-packages\django\core\handlers\exception.py", line 35, in inner
+    response = get_response(request)
+  File "E:\python_virtualenv\edu_baizhi\lib\site-packages\django\core\handlers\base.py", line 128, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "E:\python_virtualenv\edu_baizhi\lib\site-packages\django\core\handlers\base.py", line 126, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "E:\python_virtualenv\edu_baizhi\lib\site-packages\django\views\decorators\csrf.py", line 54, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "E:\python_virtualenv\edu_baizhi\lib\site-packages\rest_framework\viewsets.py", line 114, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "E:\python_virtualenv\edu_baizhi\lib\site-packages\rest_framework\views.py", line 499, in dispatch
+    self.response = self.finalize_response(request, response, *args, **kwargs)
+  File "E:\python_virtualenv\edu_baizhi\lib\site-packages\rest_framework\views.py", line 414, in finalize_response
+    % type(response)
+AssertionError: Expected a `Response`, `HttpResponse` or `HttpStreamingResponse` to be returned from the view, but received a `<class 'NoneType'>`
+ERROR 2020-07-15 18:45:03,423 basehttp 124 "POST /cart/option/ HTTP/1.1" 500 84905
+ERROR 2020-07-15 18:49:57,084 exceptions 15 <cart.views.CartViewSet object at 0x000001824A5298D0>--POST--get() returned more than one Course -- it returned 18!
+ERROR 2020-07-15 18:49:57,092 basehttp 124 "POST /cart/option/ HTTP/1.1" 500 67
+ERROR 2020-07-15 18:50:14,996 basehttp 124 "GET /media/video/1.mp4 HTTP/1.1" 500 59
+ERROR 2020-07-15 18:50:28,172 exceptions 15 <cart.views.CartViewSet object at 0x000001824A766F98>--POST--get() returned more than one Course -- it returned 18!
+ERROR 2020-07-15 18:50:28,180 basehttp 124 "POST /cart/option/ HTTP/1.1" 500 67
+ERROR 2020-07-15 18:51:35,104 basehttp 124 "GET /media/video/1.mp4 HTTP/1.1" 500 59
+ERROR 2020-07-15 18:51:35,292 exceptions 15 <cart.views.CartViewSet object at 0x000001824A7C69E8>--POST--get() returned more than one Course -- it returned 18!
+ERROR 2020-07-15 18:51:35,297 basehttp 124 "POST /cart/option/ HTTP/1.1" 500 67
+ERROR 2020-07-15 18:51:49,076 exceptions 15 <cart.views.CartViewSet object at 0x00000288F1EDCB38>--POST--get() returned more than one Course -- it returned 18!
+ERROR 2020-07-15 18:51:49,077 basehttp 124 "POST /cart/option/ HTTP/1.1" 500 67
+WARNING 2020-07-15 19:14:24,894 basehttp 124 "POST /cart/option/ HTTP/1.1" 401 38
+ERROR 2020-07-15 19:28:42,912 exceptions 15 <cart.views.CartViewSet object at 0x000001C96C22D518>--GET--'Redis' object has no attribute 'smermbers'
+ERROR 2020-07-15 19:28:43,095 basehttp 124 "GET /cart/option/ HTTP/1.1" 500 6977
+ERROR 2020-07-15 19:38:51,287 exceptions 15 <cart.views.CartViewSet object at 0x000001CDBC4907B8>--GET--not enough values to unpack (expected 2, got 1)
+ERROR 2020-07-15 19:38:51,305 basehttp 124 "GET /cart/option/ HTTP/1.1" 500 6977
+ERROR 2020-07-15 19:39:31,572 exceptions 15 <cart.views.CartViewSet object at 0x000001CDBC3D8E48>--GET--not enough values to unpack (expected 2, got 1)
+ERROR 2020-07-15 19:39:31,594 basehttp 124 "GET /cart/option/ HTTP/1.1" 500 6977
+ERROR 2020-07-15 19:40:15,656 exceptions 15 <cart.views.CartViewSet object at 0x000001A147F7DFD0>--GET--not enough values to unpack (expected 2, got 1)
+ERROR 2020-07-15 19:40:15,713 basehttp 124 "GET /cart/option/ HTTP/1.1" 500 6977
+ERROR 2020-07-15 19:41:45,727 exceptions 15 <cart.views.CartViewSet object at 0x000002A4C3C57DA0>--GET--not enough values to unpack (expected 2, got 1)
+ERROR 2020-07-15 19:41:45,775 basehttp 124 "GET /cart/option/ HTTP/1.1" 500 6977
+ERROR 2020-07-15 19:43:33,401 exceptions 15 <cart.views.CartViewSet object at 0x0000021FDC8ADFD0>--GET--not enough values to unpack (expected 2, got 1)
+ERROR 2020-07-15 19:43:33,447 basehttp 124 "GET /cart/option/ HTTP/1.1" 500 6977
+ERROR 2020-07-15 19:44:31,004 exceptions 15 <cart.views.CartViewSet object at 0x000002BC857FDFD0>--GET--not enough values to unpack (expected 2, got 1)
+ERROR 2020-07-15 19:44:31,054 basehttp 124 "GET /cart/option/ HTTP/1.1" 500 6977
+ERROR 2020-07-15 19:49:02,887 exceptions 15 <cart.views.CartViewSet object at 0x00000201980BF048>--GET--not enough values to unpack (expected 2, got 1)
+ERROR 2020-07-15 19:49:02,943 basehttp 124 "GET /cart/option/ HTTP/1.1" 500 6977
+ERROR 2020-07-15 19:50:46,085 exceptions 15 <cart.views.CartViewSet object at 0x0000015D7F5C6FD0>--GET--not enough values to unpack (expected 2, got 1)
+ERROR 2020-07-15 19:50:46,133 basehttp 124 "GET /cart/option/ HTTP/1.1" 500 6977
+ERROR 2020-07-15 19:51:32,227 exceptions 15 <cart.views.CartViewSet object at 0x00000125B633D5F8>--GET--not enough values to unpack (expected 2, got 1)
+ERROR 2020-07-15 19:53:50,570 exceptions 15 <cart.views.CartViewSet object at 0x0000019127929E10>--GET--not enough values to unpack (expected 2, got 1)
+ERROR 2020-07-15 19:53:50,628 basehttp 124 "GET /cart/option/ HTTP/1.1" 500 6977
+ERROR 2020-07-15 20:22:45,436 basehttp 124 "GET /media/video/1.mp4 HTTP/1.1" 500 59
+WARNING 2020-07-15 21:10:09,866 basehttp 124 "GET /cart/option/ HTTP/1.1" 401 38
+ERROR 2020-07-15 21:19:40,211 basehttp 124 "GET /media/video/1.mp4 HTTP/1.1" 500 59
+ERROR 2020-07-15 21:20:25,750 basehttp 124 "GET /media/video/1.mp4 HTTP/1.1" 500 59
+WARNING 2020-07-15 21:55:25,092 basehttp 124 "PATCH /cart/option/ HTTP/1.1" 405 47
+WARNING 2020-07-15 21:55:32,077 basehttp 124 "PATCH /cart/option/ HTTP/1.1" 405 47
+WARNING 2020-07-15 22:15:01,986 basehttp 124 "DELETE /cart/option/ HTTP/1.1" 401 43
+WARNING 2020-07-15 22:15:45,562 basehttp 124 "DELETE /cart/option/ HTTP/1.1" 401 43
+WARNING 2020-07-15 22:16:55,411 basehttp 124 "DELETE /cart/option/ HTTP/1.1" 401 43
+WARNING 2020-07-15 22:17:44,798 basehttp 124 "DELETE /cart/option/ HTTP/1.1" 401 43
+WARNING 2020-07-15 22:18:04,181 basehttp 124 "DELETE /cart/option/ HTTP/1.1" 401 43
+WARNING 2020-07-15 22:23:56,876 basehttp 124 "DELETE /cart/option/ HTTP/1.1" 401 43
+WARNING 2020-07-15 22:50:16,665 basehttp 124 "GET /cart/option1/ HTTP/1.1" 405 45

@@ -57,7 +57,7 @@ class CaptchaAPIView(APIView):
         else:
             result = gt.failback_validate(challenge, validate, seccode)
         result = {"status": "success"} if result else {"status": "fail"}
-        return Response(result)
+        return Response(result, status=http_status.HTTP_200_OK)
 
 
 class UserRegisterAPIView(CreateAPIView):
@@ -75,7 +75,7 @@ class CheckPhoneAPIView(APIView):
         if user:
             raise serializers.ValidationError("手机号已被注册")
 
-        return Response({"message": "OK"})
+        return Response({"message": "OK"}, status=http_status.HTTP_200_OK)
 
 
 class SendMessageAPIView(APIView):

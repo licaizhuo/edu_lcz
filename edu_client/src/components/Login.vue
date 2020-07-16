@@ -68,7 +68,7 @@
                         password: this.password,
                     },
                 }).then(res => {
-                    let token_time = new Date(new Date().getTime() + 20 * 60 * 1000);
+                    let token_time = new Date(new Date().getTime() + 60 * 60 * 1000);
                     this.$cookies.set("token", res.data.token, {
                         expires: token_time
                     });
@@ -88,6 +88,7 @@
                         this.$cookies.set("username", username);
                         this.$cookies.remove("password");
                     }
+                    this.$store.commit('get_cart_length', res.data.cart_length)
                     this.$message.success("登入成功，欢迎回来")
                     this.$router.go(-1)
                 }).catch(error => {
@@ -98,7 +99,7 @@
                 let _this = this;
                 captchaObj.onSuccess(function () {
                     var validate = captchaObj.getValidate();
-                    console.log(validate.geetest_challenge);
+                    // console.log(validate.geetest_challenge);
                     _this.$axios({
                         url: _this.$settings.HOST + "user/captcha/",
                         method: "post",
@@ -191,6 +192,9 @@
             }
         },
         created() {
+            if (this.$cookies.get('token')) {
+                this.$router.push('/')
+            }
             let username = this.$cookies.get("username");
             let password = this.$cookies.get("password");
             if (username && password) {

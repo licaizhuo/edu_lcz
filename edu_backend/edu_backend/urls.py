@@ -15,7 +15,6 @@ Including another URLconf
 """
 import xadmin
 from django.conf import settings
-from django.contrib import admin
 from django.urls import path, re_path, include
 from django.views.static import serve
 
@@ -31,5 +30,6 @@ urlpatterns = [
     path('user/', include('user.urls')),
     path("course/", include("course.urls")),
     path("ckeditor/", include("ckeditor_uploader.urls")),
+    path("cart/", include("cart.urls")),
     re_path(r'media/(?P<path>.*)', serve, {'document_root': settings.MEDIA_ROOT})
 ]

@@ -32,7 +32,11 @@
                             <button class="buy-now">立即购买</button>
                             <button class="free">免费试学</button>
                         </div>
-                        <div class="add-cart"><img src="/static/image/cart-yellow.svg" alt="">加入购物车</div>
+                        <el-button type="success" @click="add_cart" style="float: right"><img
+                            src="/static/image/cart.svg" alt="">加入购物车
+                        </el-button>
+
+
                     </div>
                 </div>
             </div>
@@ -185,7 +189,36 @@
                     this.$message.error("出现错误啦，请刷新页面")
                 })
             },
-
+            check_user_login() {
+                let token = this.$cookies.get('token')
+                if (!token) {
+                    let self = this
+                    this.$confirm('对不起，需要您先进行登入', {
+                        callback() {
+                            self.$router.push(('/login'))
+                        }
+                    });
+                    return false
+                }
+                return token
+            },
+            add_cart() {
+                let token = this.check_user_login()
+                this.$axios.post(`${this.$settings.HOST}cart/option/`, {
+                        course_id: this.course_info.id,
+                    },
+                    {
+                        headers: {
+                            "Authorization": "jwt " + token
+                        }
+                    }).then(res => {
+                    // console.log()
+                    this.$store.commit('get_cart_length', res.data.cart_length)
+                    this.$message.success(res.data.message)
+                }).catch(error=>{
+                    this.$message.error(error.response.data.message)
+                })
+            },
             get_chapter_info(id) {
                 let filters = {
                     course_id: id
@@ -234,7 +267,9 @@
             },
         },
         components: {
-            Header, Footer, videoPlayer
+            "Header": Header,
+            "Footer": Footer,
+            videoPlayer
         },
         created() {
             let id = this.$route.params.id

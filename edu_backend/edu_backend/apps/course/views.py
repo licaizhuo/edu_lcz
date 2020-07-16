@@ -1,11 +1,8 @@
-from django.shortcuts import render
 from django_filters.rest_framework import DjangoFilterBackend
-# Create your views here.
-from django_redis import get_redis_connection
-from rest_framework.generics import ListAPIView, RetrieveAPIView
-from rest_framework.filters import OrderingFilter
-from rest_framework.views import APIView
 
+from rest_framework.filters import OrderingFilter
+from rest_framework.generics import ListAPIView, RetrieveAPIView
+from django_redis import get_redis_connection
 from course.models import CourseCategory, Course, CourseChapter
 from course.pagination import CoursePageNumberPagination
 from course.serializers import CourseModelCategorySerializer, CourseListModelSerializer, CourseInfoModelSerializer, \
@@ -45,7 +42,6 @@ class ChapterListAPIView(ListAPIView):
     filter_backends = [DjangoFilterBackend]
     filter_fields = ("course_id",)
     # filter_fields = ("course",)
-
 
 # class UserIssueStorageAPIView(APIView):
 #

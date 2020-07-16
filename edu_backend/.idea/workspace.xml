@@ -4,6 +4,21 @@
     <list default="true" id="ff8c66c3-3367-4e0f-b061-85cab2d53d87" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/edu_backend/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/edu_backend/.gitignore" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/edu_backend/apps/course/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/edu_backend/apps/course/views.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/edu_backend/apps/user/utils.py" beforeDir="false" afterPath="$PROJECT_DIR$/edu_backend/apps/user/utils.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/edu_backend/apps/user/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/edu_backend/apps/user/views.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/edu_backend/urls.py" beforeDir="false" afterPath="$PROJECT_DIR$/edu_backend/urls.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/logs/lesson_api.log" beforeDir="false" afterPath="$PROJECT_DIR$/logs/lesson_api.log" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../edu_client/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/../edu_client/package-lock.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../edu_client/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/../edu_client/package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../edu_client/src/components/Course.vue" beforeDir="false" afterPath="$PROJECT_DIR$/../edu_client/src/components/Course.vue" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../edu_client/src/components/CourseDetail.vue" beforeDir="false" afterPath="$PROJECT_DIR$/../edu_client/src/components/CourseDetail.vue" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../edu_client/src/components/Login.vue" beforeDir="false" afterPath="$PROJECT_DIR$/../edu_client/src/components/Login.vue" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../edu_client/src/components/Register.vue" beforeDir="false" afterPath="$PROJECT_DIR$/../edu_client/src/components/Register.vue" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../edu_client/src/components/common/Footer.vue" beforeDir="false" afterPath="$PROJECT_DIR$/../edu_client/src/components/common/Footer.vue" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../edu_client/src/components/common/Header.vue" beforeDir="false" afterPath="$PROJECT_DIR$/../edu_client/src/components/common/Header.vue" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../edu_client/src/main.js" beforeDir="false" afterPath="$PROJECT_DIR$/../edu_client/src/main.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../edu_client/src/router/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/../edu_client/src/router/index.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -47,7 +62,7 @@
     <property name="node.js.path.for.package.tslint" value="project" />
     <property name="node.js.selected.package.eslint" value="(autodetect)" />
     <property name="node.js.selected.package.tslint" value="(autodetect)" />
-    <property name="settings.editor.selected.configurable" value="preferences.pluginManager" />
+    <property name="settings.editor.selected.configurable" value="editor.preferences.completion" />
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
@@ -133,9 +148,9 @@
       <method v="2" />
     </configuration>
     <list>
+      <item itemvalue="Django server.edu_backend" />
       <item itemvalue="Python.manage" />
       <item itemvalue="Python.tests" />
-      <item itemvalue="Django server.edu_backend" />
     </list>
     <recent_temporary>
       <list>
@@ -177,68 +192,83 @@
       <screen x="0" y="0" width="1536" height="824" />
     </state>
     <state x="415" y="98" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.0.1536.824@0.0.1536.824" timestamp="1594253315589" />
+    <state x="937" y="91" key="#com.intellij.ide.util.MemberChooser" timestamp="1594802156546">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state x="937" y="91" key="#com.intellij.ide.util.MemberChooser/0.0.1536.824@0.0.1536.824" timestamp="1594802156546" />
     <state x="830" y="177" key="FileChooserDialogImpl" timestamp="1594772440734">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
     <state x="830" y="177" key="FileChooserDialogImpl/0.0.1536.824@0.0.1536.824" timestamp="1594772440734" />
-    <state width="1493" height="142" key="GridCell.Tab.0.bottom" timestamp="1594736069527">
+    <state width="1493" height="215" key="GridCell.Tab.0.bottom" timestamp="1594828921795">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state width="1493" height="142" key="GridCell.Tab.0.bottom/0.0.1536.824@0.0.1536.824" timestamp="1594736069527" />
-    <state width="1493" height="142" key="GridCell.Tab.0.center" timestamp="1594736069527">
+    <state width="1493" height="215" key="GridCell.Tab.0.bottom/0.0.1536.824@0.0.1536.824" timestamp="1594828921795" />
+    <state width="1493" height="215" key="GridCell.Tab.0.center" timestamp="1594828921795">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state width="1493" height="142" key="GridCell.Tab.0.center/0.0.1536.824@0.0.1536.824" timestamp="1594736069527" />
-    <state width="1493" height="142" key="GridCell.Tab.0.left" timestamp="1594736069527">
+    <state width="1493" height="215" key="GridCell.Tab.0.center/0.0.1536.824@0.0.1536.824" timestamp="1594828921795" />
+    <state width="1493" height="215" key="GridCell.Tab.0.left" timestamp="1594828921795">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state width="1493" height="142" key="GridCell.Tab.0.left/0.0.1536.824@0.0.1536.824" timestamp="1594736069527" />
-    <state width="1493" height="142" key="GridCell.Tab.0.right" timestamp="1594736069527">
+    <state width="1493" height="215" key="GridCell.Tab.0.left/0.0.1536.824@0.0.1536.824" timestamp="1594828921795" />
+    <state width="1493" height="215" key="GridCell.Tab.0.right" timestamp="1594828921795">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state width="1493" height="142" key="GridCell.Tab.0.right/0.0.1536.824@0.0.1536.824" timestamp="1594736069527" />
-    <state width="1493" height="210" key="GridCell.Tab.1.bottom" timestamp="1594561158473">
+    <state width="1493" height="215" key="GridCell.Tab.0.right/0.0.1536.824@0.0.1536.824" timestamp="1594828921795" />
+    <state width="1493" height="215" key="GridCell.Tab.1.bottom" timestamp="1594828921795">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state width="1493" height="210" key="GridCell.Tab.1.bottom/0.0.1536.824@0.0.1536.824" timestamp="1594561158473" />
-    <state width="1493" height="210" key="GridCell.Tab.1.center" timestamp="1594561158473">
+    <state width="1493" height="215" key="GridCell.Tab.1.bottom/0.0.1536.824@0.0.1536.824" timestamp="1594828921795" />
+    <state width="1493" height="215" key="GridCell.Tab.1.center" timestamp="1594828921795">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state width="1493" height="210" key="GridCell.Tab.1.center/0.0.1536.824@0.0.1536.824" timestamp="1594561158473" />
-    <state width="1493" height="210" key="GridCell.Tab.1.left" timestamp="1594561158473">
+    <state width="1493" height="215" key="GridCell.Tab.1.center/0.0.1536.824@0.0.1536.824" timestamp="1594828921795" />
+    <state width="1493" height="215" key="GridCell.Tab.1.left" timestamp="1594828921795">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state width="1493" height="210" key="GridCell.Tab.1.left/0.0.1536.824@0.0.1536.824" timestamp="1594561158473" />
-    <state width="1493" height="210" key="GridCell.Tab.1.right" timestamp="1594561158473">
+    <state width="1493" height="215" key="GridCell.Tab.1.left/0.0.1536.824@0.0.1536.824" timestamp="1594828921795" />
+    <state width="1493" height="215" key="GridCell.Tab.1.right" timestamp="1594828921795">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state width="1493" height="210" key="GridCell.Tab.1.right/0.0.1536.824@0.0.1536.824" timestamp="1594561158473" />
-    <state x="540" y="98" width="996" height="726" key="SettingsEditor" timestamp="1594253768071">
+    <state width="1493" height="215" key="GridCell.Tab.1.right/0.0.1536.824@0.0.1536.824" timestamp="1594828921795" />
+    <state x="966" y="116" key="RollbackChangesDialog" timestamp="1594802568239">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state x="540" y="98" width="996" height="726" key="SettingsEditor/0.0.1536.824@0.0.1536.824" timestamp="1594253768071" />
+    <state x="966" y="116" key="RollbackChangesDialog/0.0.1536.824@0.0.1536.824" timestamp="1594802568239" />
+    <state x="223" y="76" width="996" height="726" key="SettingsEditor" timestamp="1594802048430">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state x="223" y="76" width="996" height="726" key="SettingsEditor/0.0.1536.824@0.0.1536.824" timestamp="1594802048430" />
     <state x="449" y="236" key="com.intellij.ide.util.TipDialog" timestamp="1594772423909">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
     <state x="449" y="236" key="com.intellij.ide.util.TipDialog/0.0.1536.824@0.0.1536.824" timestamp="1594772423909" />
-    <state x="1038" y="145" width="672" height="678" key="search.everywhere.popup" timestamp="1594298946733">
+    <state x="596" y="187" width="672" height="678" key="search.everywhere.popup" timestamp="1594813877516">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state x="1038" y="145" width="672" height="678" key="search.everywhere.popup/0.0.1536.824@0.0.1536.824" timestamp="1594298946733" />
+    <state x="596" y="187" width="672" height="678" key="search.everywhere.popup/0.0.1536.824@0.0.1536.824" timestamp="1594813877516" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
       <breakpoints>
         <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
           <url>file://$PROJECT_DIR$/edu_backend/apps/user/utils.py</url>
-          <line>45</line>
+          <line>49</line>
           <option name="timeStamp" value="14" />
         </line-breakpoint>
       </breakpoints>
+      <default-breakpoints>
+        <breakpoint type="python-exception">
+          <properties notifyOnTerminate="true" exception="BaseException">
+            <option name="notifyOnTerminate" value="true" />
+          </properties>
+        </breakpoint>
+      </default-breakpoints>
     </breakpoint-manager>
   </component>
   <component name="com.intellij.coverage.CoverageDataManagerImpl">
     <SUITE FILE_PATH="coverage/edu_backend$tests.coverage" NAME="tests Coverage Results" MODIFIED="1594551801941" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/edu_backend/apps/user" />
-    <SUITE FILE_PATH="coverage/edu_backend$manage.coverage" NAME="manage Coverage Results" MODIFIED="1594772501649" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
+    <SUITE FILE_PATH="coverage/edu_backend$manage.coverage" NAME="manage Coverage Results" MODIFIED="1594824610866" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
   </component>
 </project>

@@ -8,13 +8,15 @@
                 <ul class="nav full-left">
                     <li v-for="(header,index) in header_list" :key="index">
                         <span v-if="header.is_site"><a :href="header.link">{{header.title}}</a></span>
-                        <span v-else @click="go_course">{{header.title}}</span>
+                        <router-link v-else :to="'/'+header.link">{{header.title}}</router-link>
                     </li>
                 </ul>
                 <div class="login-bar full-right">
                     <div class="shop-cart full-left">
-                        <img src="static/image/cart.svg" alt="">
-                        <span><router-link to="/cart">购物车</router-link></span>
+                        <router-link to="/cart"><span
+                            v-if="is_login && this.$store.state.cart_length>0">{{this.$store.state.cart_length}}</span>
+                            <img src="static/image/cart.svg" alt="">
+                            <span>购物车</span></router-link>
                     </div>
                     <div class="login-box full-left" v-if="is_login" id="login_success">
                         <span>个人中心</span>
@@ -57,18 +59,12 @@
 
                 })
             },
-            go_course() {
-                this.$router.push('/course')
-            },
             quit_bz() {
                 this.$confirm('是否确定退出?', '提示', {
                     confirmButtonText: '确定',
                     cancelButtonText: '取消',
                     type: 'warning'
                 }).then(() => {
-
-                    this.$cookies.remove("username");
-                    this.$cookies.remove("password");
                     this.$cookies.remove("token");
                     this.$cookies.remove("user_id");
                     this.$message({
@@ -90,7 +86,7 @@
             let token = this.$cookies.get('token')
             if (token) {
                 this.is_login = true
-                // this.username = username
+                this.$store.commit('get_cart_length', sessionStorage.cart_length)
             }
         }
     }

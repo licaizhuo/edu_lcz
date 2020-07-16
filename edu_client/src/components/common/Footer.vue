@@ -3,8 +3,8 @@
         <ul>
             <li v-for="(footer,index) in footer_list" :key="index">
 
-                <a :href="footer.link" v-if="footer.is_site" style="color: #f0f0f0" >{{footer.title}}</a>
-                <router-link v-else :to="footer.link" style="color: #f0f0f0" >{{footer.title}}</router-link>
+                <a :href="footer.link" v-if="footer.is_site" style="color: #f0f0f0">{{footer.title}}</a>
+                <router-link v-else :to="'/'+footer.link" style="color: #f0f0f0">{{footer.title}}</router-link>
             </li>
         </ul>
     </div>

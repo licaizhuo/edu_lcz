@@ -70,7 +70,6 @@
 
 <script>
     import Header from "./common/Header";
-    import Banner from "./common/Banner";
     import Footer from "./common/Footer";
 
     export default {
@@ -93,7 +92,6 @@
         },
         components: {
             "Header": Header,
-            "Banner": Banner,
             "Footer": Footer,
         },
         watch: {

@@ -6,13 +6,17 @@ from rest_framework import serializers
 
 from edu_backend.settings import constants
 from user.models import UserInfo
+from django_redis import get_redis_connection
 
 
 def jwt_response_payload_handler(token, user=None, request=None):
+    redis_connection = get_redis_connection('cart')
+    cart_length = redis_connection.hlen('cart_%s' % user.id)
     return {
         'token': token,
         'username': user.username,
         'user_id': user.id,
+        'cart_length': cart_length,
     }
 
 
