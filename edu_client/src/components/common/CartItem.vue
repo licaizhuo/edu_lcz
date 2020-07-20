@@ -10,14 +10,12 @@
             </router-link>
         </div>
         <div class="cart_column column_3">
-            <el-select v-model="expire" size="mini" placeholder="请选择购买有效期" class="my_el_select">
-                <el-option label="1个月有效" value="30" key="30"></el-option>
-                <el-option label="2个月有效" value="60" key="60"></el-option>
-                <el-option label="3个月有效" value="90" key="90"></el-option>
-                <el-option label="永久有效" value="0" key="10000"></el-option>
+            <el-select v-model="course.expire_id" size="mini" placeholder="请选择购买有效期" class="my_el_select">
+                <el-option v-for="item in course.expire_list" :label="item.expire_text" :value="item.id"
+                           :key="item.id"></el-option>
             </el-select>
         </div>
-        <div class="cart_column column_4">￥{{course.course_price}}</div>
+        <div class="cart_column column_4">¥{{course.course_real_price}}</div>
 
         <div class="cart_column column_4">
             <el-link type="danger" @click="del_cart_course">删除</el-link>
@@ -29,20 +27,34 @@
     export default {
         name: "CartItem",
         //接收父组件传递的参数
-        props: ['course', 'index'],
+        props: ['course'],
         watch: {
             'course.selected': function () {
                 this.change_select()
-            }
+            },
+            'course.expire_id': function () {
+                this.change_expire()
+            },
         },
         data() {
-            return {
-                expire: "1个月有效",
-            }
+            return {}
         },
         methods: {
-            change_select() {
+            check_token() {
                 let token = this.$cookies.get('token')
+                if (!token) {
+                    let self = this
+                    this.$alert('对不起！登陆过期，请重新登入', {
+                        callback() {
+                            self.$router.push(('/login'))
+                        }
+                    });
+                } else {
+                    return token
+                }
+            },
+            change_select() {
+                let token = this.check_token()
                 this.$axios.patch(`${this.$settings.HOST}cart/option/`, {
                         selected: this.course.selected,
                         course_id: this.course.id
@@ -53,17 +65,38 @@
                         }
                     }).then(res => {
                     this.$message.success(res.data.message)
+                    this.$emit('change_success')
                 }).catch(error => {
                     this.$message.error("出现未知错误，请刷新页面")
                 })
             },
+            change_expire() {
+                let token = this.check_token()
+                this.$axios({
+                    url: `${this.$settings.HOST}cart/option/`,
+                    method: 'put',
+                    headers: {
+                        "Authorization": "jwt " + token
+                    },
+                    data: {
+                        course_id: this.course.id,
+                        expire_id: this.course.expire_id,
+                    },
+                }).then(res => {
+                    this.$message.success(res.data.message)
+                    this.course.course_real_price = res.data.course_real_price
+                    this.$emit('change_success')
+                }).catch(error => {
+                    this.$message.error(error.response.data.message)
+                })
+            },
             del_cart_course() {
+                let token = this.check_token()
                 this.$confirm('将删除该用户, 是否确定?', '提示', {
                     confirmButtonText: '确定',
                     cancelButtonText: '取消',
                     type: 'warning'
                 }).then(() => {
-                    let token = this.$cookies.get('token')
                     this.$axios({
                         url: `${this.$settings.HOST}cart/option/`,
                         method: 'delete',
@@ -75,9 +108,8 @@
                         },
                     }).then(res => {
                         this.$message.success(res.data.message)
-                        let data = new Date()
-                        let data_str = data.getTime()
-                        this.$router.push('/cart/' + data_str)
+                        this.$store.commit('get_cart_length', res.data.cart_length)
+                        this.$emit('delete_success')
                     }).catch(error => {
                         this.$message.error(error.response.data.message)
                     })

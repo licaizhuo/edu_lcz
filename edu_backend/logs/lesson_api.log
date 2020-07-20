@@ -4790,3 +4790,518 @@ WARNING 2020-07-15 22:17:44,798 basehttp 124 "DELETE /cart/option/ HTTP/1.1" 401
 WARNING 2020-07-15 22:18:04,181 basehttp 124 "DELETE /cart/option/ HTTP/1.1" 401 43
 WARNING 2020-07-15 22:23:56,876 basehttp 124 "DELETE /cart/option/ HTTP/1.1" 401 43
 WARNING 2020-07-15 22:50:16,665 basehttp 124 "GET /cart/option1/ HTTP/1.1" 405 45
+ERROR 2020-07-16 18:03:11,557 exception 74 Invalid HTTP_HOST header: '127.0.0.1:8000'. You may need to add '127.0.0.1' to ALLOWED_HOSTS.
+WARNING 2020-07-16 18:03:11,976 basehttp 124 "GET / HTTP/1.1" 400 69816
+ERROR 2020-07-16 18:03:12,273 exception 74 Invalid HTTP_HOST header: '127.0.0.1:8000'. You may need to add '127.0.0.1' to ALLOWED_HOSTS.
+WARNING 2020-07-16 18:03:12,335 basehttp 124 "GET /favicon.ico HTTP/1.1" 400 69729
+WARNING 2020-07-16 18:03:15,832 base 93 Not Found: /favicon.ico
+WARNING 2020-07-16 18:03:15,833 basehttp 124 "GET /favicon.ico HTTP/1.1" 404 2643
+WARNING 2020-07-16 20:07:06,771 base 93 Not Found: /media/course/course-cover.jpeg
+WARNING 2020-07-16 20:07:06,781 basehttp 124 "GET /media/course/course-cover.jpeg HTTP/1.1" 404 1850
+WARNING 2020-07-16 20:07:06,778 base 93 Not Found: /media/course/2.jpeg
+WARNING 2020-07-16 20:07:06,785 basehttp 124 "GET /media/course/2.jpeg HTTP/1.1" 404 1817
+WARNING 2020-07-16 20:09:23,892 base 93 Not Found: /media/course/course-cover.jpeg
+WARNING 2020-07-16 20:09:23,896 basehttp 124 "GET /media/course/course-cover.jpeg HTTP/1.1" 404 1850
+WARNING 2020-07-16 20:09:23,906 base 93 Not Found: /media/course/2.jpeg
+WARNING 2020-07-16 20:09:23,907 basehttp 124 "GET /media/course/2.jpeg HTTP/1.1" 404 1817
+WARNING 2020-07-16 20:11:19,127 base 93 Not Found: /media/course/course-cover.jpeg
+WARNING 2020-07-16 20:11:19,133 basehttp 124 "GET /media/course/course-cover.jpeg HTTP/1.1" 404 1850
+WARNING 2020-07-16 20:11:19,141 base 93 Not Found: /media/course/2.jpeg
+WARNING 2020-07-16 20:11:19,142 basehttp 124 "GET /media/course/2.jpeg HTTP/1.1" 404 1817
+WARNING 2020-07-16 20:14:41,447 base 93 Not Found: /media/course/2.jpeg
+WARNING 2020-07-16 20:14:41,449 base 93 Not Found: /media/course/course-cover.jpeg
+WARNING 2020-07-16 20:14:41,450 basehttp 124 "GET /media/course/2.jpeg HTTP/1.1" 404 1817
+WARNING 2020-07-16 20:14:41,450 basehttp 124 "GET /media/course/course-cover.jpeg HTTP/1.1" 404 1850
+WARNING 2020-07-16 20:15:15,619 base 93 Not Found: /media/course/2.jpeg
+WARNING 2020-07-16 20:15:15,621 base 93 Not Found: /media/course/course-cover.jpeg
+WARNING 2020-07-16 20:15:15,625 basehttp 124 "GET /media/course/2.jpeg HTTP/1.1" 404 1817
+WARNING 2020-07-16 20:15:15,626 basehttp 124 "GET /media/course/course-cover.jpeg HTTP/1.1" 404 1850
+ERROR 2020-07-16 20:44:41,674 exceptions 15 <course.views.CourseFilterListAPIView object at 0x00000155340B6F28>--GET--Field name `discount_name1` is not valid for model `Course`.
+ERROR 2020-07-16 20:44:41,676 basehttp 124 "GET /course/list_filter/?page=1&size=3&ordering=-id HTTP/1.1" 500 67
+ERROR 2020-07-16 20:46:21,838 exceptions 15 <course.views.CourseFilterListAPIView object at 0x000001D7E05DBA58>--GET--Field name `discount_name1` is not valid for model `Course`.
+ERROR 2020-07-16 20:46:21,840 basehttp 124 "GET /course/list_filter/?page=1&size=3&ordering=-id HTTP/1.1" 500 67
+ERROR 2020-07-16 21:06:02,517 exception 118 Internal Server Error: /course/list_filter/
+Traceback (most recent call last):
+  File "E:\python_virtualenv\edu_baizhi\lib\site-packages\django\core\handlers\exception.py", line 35, in inner
+    response = get_response(request)
+  File "E:\python_virtualenv\edu_baizhi\lib\site-packages\django\core\handlers\base.py", line 158, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "E:\python_virtualenv\edu_baizhi\lib\site-packages\django\core\handlers\base.py", line 156, in _get_response
+    response = response.render()
+  File "E:\python_virtualenv\edu_baizhi\lib\site-packages\django\template\response.py", line 106, in render
+    self.content = self.rendered_content
+  File "E:\python_virtualenv\edu_baizhi\lib\site-packages\rest_framework\response.py", line 70, in rendered_content
+    ret = renderer.render(self.data, accepted_media_type, context)
+  File "E:\python_virtualenv\edu_baizhi\lib\site-packages\rest_framework\renderers.py", line 104, in render
+    allow_nan=not self.strict, separators=separators
+  File "E:\python_virtualenv\edu_baizhi\lib\site-packages\rest_framework\utils\json.py", line 25, in dumps
+    return json.dumps(*args, **kwargs)
+  File "g:\software\python\python36\lib\json\__init__.py", line 238, in dumps
+    **kw).encode(obj)
+  File "g:\software\python\python36\lib\json\encoder.py", line 199, in encode
+    chunks = self.iterencode(o, _one_shot=True)
+  File "g:\software\python\python36\lib\json\encoder.py", line 257, in iterencode
+    return _iterencode(o, 0)
+  File "E:\python_virtualenv\edu_baizhi\lib\site-packages\rest_framework\utils\encoders.py", line 67, in default
+    return super().default(obj)
+  File "g:\software\python\python36\lib\json\encoder.py", line 180, in default
+    o.__class__.__name__)
+TypeError: Object of type 'CourseDiscountType' is not JSON serializable
+ERROR 2020-07-16 21:06:02,902 basehttp 124 "GET /course/list_filter/?page=1&size=3&ordering=-id HTTP/1.1" 500 121825
+WARNING 2020-07-16 21:11:59,490 base 93 Not Found: /media/course/2452c9d2-3539-447b-a98a-99378a750dee.png
+WARNING 2020-07-16 21:11:59,494 basehttp 124 "GET /media/course/2452c9d2-3539-447b-a98a-99378a750dee.png HTTP/1.1" 404 1919
+WARNING 2020-07-16 21:29:11,790 base 93 Not Found: /favicon.ico
+WARNING 2020-07-16 21:29:11,791 basehttp 124 "GET /favicon.ico HTTP/1.1" 404 2643
+ERROR 2020-07-16 21:36:03,031 exception 118 Internal Server Error: /xadmin/course/coursediscount/1/update/
+Traceback (most recent call last):
+  File "E:\python_virtualenv\edu_baizhi\lib\site-packages\django\db\backends\mysql\base.py", line 71, in execute
+    return self.cursor.execute(query, args)
+  File "E:\python_virtualenv\edu_baizhi\lib\site-packages\MySQLdb\cursors.py", line 206, in execute
+    res = self._query(query)
+  File "E:\python_virtualenv\edu_baizhi\lib\site-packages\MySQLdb\cursors.py", line 319, in _query
+    db.query(q)
+  File "E:\python_virtualenv\edu_baizhi\lib\site-packages\MySQLdb\connections.py", line 259, in query
+    _mysql.connection.query(self, query)
+MySQLdb._exceptions.OperationalError: (1048, "Column 'condition' cannot be null")
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "E:\python_virtualenv\edu_baizhi\lib\site-packages\django\core\handlers\exception.py", line 35, in inner
+    response = get_response(request)
+  File "E:\python_virtualenv\edu_baizhi\lib\site-packages\django\core\handlers\base.py", line 128, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "E:\python_virtualenv\edu_baizhi\lib\site-packages\django\core\handlers\base.py", line 126, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "E:\python_virtualenv\edu_baizhi\lib\site-packages\xadmin\sites.py", line 300, in wrapper
+    return self.admin_view(view, cacheable)(*args, **kwargs)
+  File "E:\python_virtualenv\edu_baizhi\lib\site-packages\django\views\decorators\cache.py", line 44, in _wrapped_view_func
+    response = view_func(request, *args, **kwargs)
+  File "E:\python_virtualenv\edu_baizhi\lib\site-packages\xadmin\sites.py", line 208, in inner
+    return view(request, *args, **kwargs)
+  File "E:\python_virtualenv\edu_baizhi\lib\site-packages\xadmin\views\base.py", line 282, in view
+    return handler(request, *args, **kwargs)
+  File "E:\python_virtualenv\edu_baizhi\lib\site-packages\xadmin\views\edit.py", line 512, in post
+    return super(UpdateAdminView, self).post(request, *args, **kwargs)
+  File "E:\python_virtualenv\edu_baizhi\lib\site-packages\django\utils\decorators.py", line 62, in _wrapper
+    return bound_func(*args, **kwargs)
+  File "E:\python_virtualenv\edu_baizhi\lib\site-packages\django\utils\decorators.py", line 142, in _wrapped_view
+    response = view_func(request, *args, **kwargs)
+  File "E:\python_virtualenv\edu_baizhi\lib\site-packages\django\utils\decorators.py", line 58, in bound_func
+    return func.__get__(self, type(self))(*args2, **kwargs2)
+  File "g:\software\python\python36\lib\contextlib.py", line 52, in inner
+    return func(*args, **kwds)
+  File "E:\python_virtualenv\edu_baizhi\lib\site-packages\xadmin\views\base.py", line 80, in method
+    return filter_chain(filters, len(filters) - 1, _inner_method, *args, **kwargs)
+  File "E:\python_virtualenv\edu_baizhi\lib\site-packages\xadmin\views\base.py", line 49, in filter_chain
+    return func()
+  File "E:\python_virtualenv\edu_baizhi\lib\site-packages\xadmin\views\base.py", line 74, in _inner_method
+    return func(self, *args, **kwargs)
+  File "E:\python_virtualenv\edu_baizhi\lib\site-packages\xadmin\views\edit.py", line 292, in post
+    self.save_models()
+  File "E:\python_virtualenv\edu_baizhi\lib\site-packages\xadmin\views\base.py", line 80, in method
+    return filter_chain(filters, len(filters) - 1, _inner_method, *args, **kwargs)
+  File "E:\python_virtualenv\edu_baizhi\lib\site-packages\xadmin\views\base.py", line 49, in filter_chain
+    return func()
+  File "E:\python_virtualenv\edu_baizhi\lib\site-packages\xadmin\views\base.py", line 74, in _inner_method
+    return func(self, *args, **kwargs)
+  File "E:\python_virtualenv\edu_baizhi\lib\site-packages\xadmin\views\edit.py", line 267, in save_models
+    self.new_obj.save()
+  File "E:\python_virtualenv\edu_baizhi\lib\site-packages\django\db\models\base.py", line 729, in save
+    force_update=force_update, update_fields=update_fields)
+  File "E:\python_virtualenv\edu_baizhi\lib\site-packages\django\db\models\base.py", line 759, in save_base
+    updated = self._save_table(raw, cls, force_insert, force_update, using, update_fields)
+  File "E:\python_virtualenv\edu_baizhi\lib\site-packages\django\db\models\base.py", line 823, in _save_table
+    forced_update)
+  File "E:\python_virtualenv\edu_baizhi\lib\site-packages\django\db\models\base.py", line 872, in _do_update
+    return filtered._update(values) > 0
+  File "E:\python_virtualenv\edu_baizhi\lib\site-packages\django\db\models\query.py", line 709, in _update
+    return query.get_compiler(self.db).execute_sql(CURSOR)
+  File "E:\python_virtualenv\edu_baizhi\lib\site-packages\django\db\models\sql\compiler.py", line 1379, in execute_sql
+    cursor = super().execute_sql(result_type)
+  File "E:\python_virtualenv\edu_baizhi\lib\site-packages\django\db\models\sql\compiler.py", line 1068, in execute_sql
+    cursor.execute(sql, params)
+  File "E:\python_virtualenv\edu_baizhi\lib\site-packages\django\db\backends\utils.py", line 100, in execute
+    return super().execute(sql, params)
+  File "E:\python_virtualenv\edu_baizhi\lib\site-packages\django\db\backends\utils.py", line 68, in execute
+    return self._execute_with_wrappers(sql, params, many=False, executor=self._execute)
+  File "E:\python_virtualenv\edu_baizhi\lib\site-packages\django\db\backends\utils.py", line 77, in _execute_with_wrappers
+    return executor(sql, params, many, context)
+  File "E:\python_virtualenv\edu_baizhi\lib\site-packages\django\db\backends\utils.py", line 85, in _execute
+    return self.cursor.execute(sql, params)
+  File "E:\python_virtualenv\edu_baizhi\lib\site-packages\django\db\backends\mysql\base.py", line 76, in execute
+    raise utils.IntegrityError(*tuple(e.args))
+django.db.utils.IntegrityError: (1048, "Column 'condition' cannot be null")
+ERROR 2020-07-16 21:36:03,496 basehttp 124 "POST /xadmin/course/coursediscount/1/update/ HTTP/1.1" 500 227495
+ERROR 2020-07-16 22:12:30,759 basehttp 124 "GET /course/list_filter/?page=1&size=3&ordering=-id HTTP/1.1" 500 59
+WARNING 2020-07-17 09:07:29,146 base 93 Not Found: /favicon.ico
+WARNING 2020-07-17 09:07:29,162 basehttp 124 "GET /favicon.ico HTTP/1.1" 404 2643
+WARNING 2020-07-17 09:07:38,467 base 93 Not Found: /media/course/course-cover.jpeg
+WARNING 2020-07-17 09:07:38,472 base 93 Not Found: /media/course/2.jpeg
+WARNING 2020-07-17 09:07:38,472 basehttp 124 "GET /media/course/course-cover.jpeg HTTP/1.1" 404 1850
+WARNING 2020-07-17 09:07:38,473 basehttp 124 "GET /media/course/2.jpeg HTTP/1.1" 404 1817
+ERROR 2020-07-17 09:07:46,509 basehttp 124 "GET /media/video/1.mp4 HTTP/1.1" 500 59
+WARNING 2020-07-17 09:07:47,869 base 93 Not Found: /media/course/course-cover.jpeg
+WARNING 2020-07-17 09:07:47,874 base 93 Not Found: /media/course/2.jpeg
+WARNING 2020-07-17 09:07:47,875 basehttp 124 "GET /media/course/course-cover.jpeg HTTP/1.1" 404 1850
+WARNING 2020-07-17 09:07:47,876 basehttp 124 "GET /media/course/2.jpeg HTTP/1.1" 404 1817
+ERROR 2020-07-17 09:08:08,470 basehttp 124 "GET /media/video/1.mp4 HTTP/1.1" 500 59
+WARNING 2020-07-17 11:31:38,816 base 93 Not Found: /favicon.ico
+WARNING 2020-07-17 11:31:38,839 basehttp 124 "GET /favicon.ico HTTP/1.1" 404 2643
+ERROR 2020-07-17 12:30:43,332 exceptions 15 <cart.views.CartViewSet object at 0x000001BCF057F9E8>--GET--unsupported operand type(s) for *: 'decimal.Decimal' and 'float'
+ERROR 2020-07-17 12:30:43,333 basehttp 124 "GET /cart/option/ HTTP/1.1" 500 67
+ERROR 2020-07-17 12:30:52,925 exceptions 15 <cart.views.CartViewSet object at 0x000001BCF0578828>--GET--unsupported operand type(s) for *: 'decimal.Decimal' and 'float'
+ERROR 2020-07-17 12:30:52,926 basehttp 124 "GET /cart/option/ HTTP/1.1" 500 67
+WARNING 2020-07-17 12:38:47,875 base 93 Not Found: /media/course/2452c9d2-3539-447b-a98a-99378a750dee.png
+WARNING 2020-07-17 12:38:47,876 basehttp 124 "GET /media/course/2452c9d2-3539-447b-a98a-99378a750dee.png HTTP/1.1" 404 1919
+WARNING 2020-07-17 12:38:49,836 base 93 Not Found: /media/course/2.jpeg
+WARNING 2020-07-17 12:38:49,838 basehttp 124 "GET /media/course/2.jpeg HTTP/1.1" 404 1817
+WARNING 2020-07-17 12:38:51,841 base 93 Not Found: /media/course/2.jpeg
+WARNING 2020-07-17 12:38:51,846 basehttp 124 "GET /media/course/2.jpeg HTTP/1.1" 404 1817
+WARNING 2020-07-17 12:38:53,634 base 93 Not Found: /media/course/course-cover.jpeg
+WARNING 2020-07-17 12:38:53,635 basehttp 124 "GET /media/course/course-cover.jpeg HTTP/1.1" 404 1850
+WARNING 2020-07-17 12:38:57,178 base 93 Not Found: /media/course/2.jpeg
+WARNING 2020-07-17 12:38:57,179 basehttp 124 "GET /media/course/2.jpeg HTTP/1.1" 404 1817
+WARNING 2020-07-17 12:38:58,743 base 93 Not Found: /media/course/2.jpeg
+WARNING 2020-07-17 12:38:58,744 basehttp 124 "GET /media/course/2.jpeg HTTP/1.1" 404 1817
+WARNING 2020-07-17 12:45:27,971 base 93 Not Found: /media/course/2.jpeg
+WARNING 2020-07-17 12:45:27,973 basehttp 124 "GET /media/course/2.jpeg HTTP/1.1" 404 1817
+WARNING 2020-07-17 12:51:18,155 base 93 Not Found: /media/course/2.jpeg
+WARNING 2020-07-17 12:51:18,156 basehttp 124 "GET /media/course/2.jpeg HTTP/1.1" 404 1817
+WARNING 2020-07-17 12:51:41,771 base 93 Not Found: /media/course/2.jpeg
+WARNING 2020-07-17 12:51:41,775 basehttp 124 "GET /media/course/2.jpeg HTTP/1.1" 404 1817
+WARNING 2020-07-17 14:12:56,226 base 93 Not Found: /media/course/2.jpeg
+WARNING 2020-07-17 14:12:56,227 basehttp 124 "GET /media/course/2.jpeg HTTP/1.1" 404 1817
+WARNING 2020-07-17 14:30:37,563 base 93 Not Found: /media/course/2.jpeg
+WARNING 2020-07-17 14:30:37,564 basehttp 124 "GET /media/course/2.jpeg HTTP/1.1" 404 1817
+WARNING 2020-07-17 19:37:17,569 basehttp 124 "POST /user/captcha/ HTTP/1.1" 400 32
+WARNING 2020-07-17 19:40:40,126 basehttp 124 "POST /user/captcha/ HTTP/1.1" 400 32
+WARNING 2020-07-17 19:43:21,042 basehttp 124 "POST /user/captcha/ HTTP/1.1" 400 32
+ERROR 2020-07-17 19:43:21,046 basehttp 124 "POST /user/captcha/ HTTP/1.1" 500 59
+ERROR 2020-07-17 19:43:21,195 exceptions 15 <user.views.CaptchaAPIView object at 0x000002C979922D68>--POST--a bytes-like object is required, not 'str'
+ERROR 2020-07-17 19:43:21,204 basehttp 124 "POST /user/captcha/ HTTP/1.1" 500 67
+ERROR 2020-07-17 19:44:49,118 exceptions 15 <user.views.CaptchaAPIView object at 0x000001E25A223630>--POST--a bytes-like object is required, not 'str'
+ERROR 2020-07-17 19:44:49,126 basehttp 124 "POST /user/captcha/ HTTP/1.1" 500 67
+WARNING 2020-07-17 20:48:51,145 basehttp 124 "POST /cart/option/ HTTP/1.1" 401 38
+WARNING 2020-07-17 20:49:05,350 base 93 Not Found: /media/course/2.jpeg
+WARNING 2020-07-17 20:49:05,351 basehttp 124 "GET /media/course/2.jpeg HTTP/1.1" 404 1817
+WARNING 2020-07-17 21:01:52,062 base 93 Not Found: /media/course/2.jpeg
+WARNING 2020-07-17 21:01:52,063 basehttp 124 "GET /media/course/2.jpeg HTTP/1.1" 404 1817
+WARNING 2020-07-17 21:03:13,380 base 93 Not Found: /media/course/2.jpeg
+WARNING 2020-07-17 21:03:13,381 basehttp 124 "GET /media/course/2.jpeg HTTP/1.1" 404 1817
+WARNING 2020-07-17 21:03:26,062 base 93 Not Found: /media/course/2.jpeg
+WARNING 2020-07-17 21:03:26,062 basehttp 124 "GET /media/course/2.jpeg HTTP/1.1" 404 1817
+WARNING 2020-07-17 21:03:33,940 base 93 Not Found: /media/course/2.jpeg
+WARNING 2020-07-17 21:03:33,940 basehttp 124 "GET /media/course/2.jpeg HTTP/1.1" 404 1817
+WARNING 2020-07-17 21:04:09,436 base 93 Not Found: /media/course/2.jpeg
+WARNING 2020-07-17 21:04:09,437 basehttp 124 "GET /media/course/2.jpeg HTTP/1.1" 404 1817
+WARNING 2020-07-17 21:04:33,097 base 93 Not Found: /media/course/2.jpeg
+WARNING 2020-07-17 21:04:33,098 basehttp 124 "GET /media/course/2.jpeg HTTP/1.1" 404 1817
+WARNING 2020-07-17 21:05:02,642 base 93 Not Found: /media/course/2.jpeg
+WARNING 2020-07-17 21:05:02,643 basehttp 124 "GET /media/course/2.jpeg HTTP/1.1" 404 1817
+WARNING 2020-07-17 21:05:37,075 base 93 Not Found: /media/course/2.jpeg
+WARNING 2020-07-17 21:05:37,075 basehttp 124 "GET /media/course/2.jpeg HTTP/1.1" 404 1817
+WARNING 2020-07-17 21:10:57,225 base 93 Not Found: /media/course/2.jpeg
+WARNING 2020-07-17 21:10:57,226 basehttp 124 "GET /media/course/2.jpeg HTTP/1.1" 404 1817
+WARNING 2020-07-17 21:13:13,166 base 93 Not Found: /media/course/2.jpeg
+WARNING 2020-07-17 21:13:13,166 basehttp 124 "GET /media/course/2.jpeg HTTP/1.1" 404 1817
+WARNING 2020-07-17 21:13:58,966 base 93 Not Found: /media/course/2.jpeg
+WARNING 2020-07-17 21:13:58,966 basehttp 124 "GET /media/course/2.jpeg HTTP/1.1" 404 1817
+WARNING 2020-07-17 21:16:44,424 base 93 Not Found: /media/course/2.jpeg
+WARNING 2020-07-17 21:16:44,425 basehttp 124 "GET /media/course/2.jpeg HTTP/1.1" 404 1817
+WARNING 2020-07-17 21:17:01,499 base 93 Not Found: /media/course/2.jpeg
+WARNING 2020-07-17 21:17:01,500 basehttp 124 "GET /media/course/2.jpeg HTTP/1.1" 404 1817
+WARNING 2020-07-17 21:17:56,977 base 93 Not Found: /media/course/2.jpeg
+WARNING 2020-07-17 21:17:56,978 basehttp 124 "GET /media/course/2.jpeg HTTP/1.1" 404 1817
+WARNING 2020-07-17 21:18:04,259 base 93 Not Found: /media/course/2.jpeg
+WARNING 2020-07-17 21:18:04,260 basehttp 124 "GET /media/course/2.jpeg HTTP/1.1" 404 1817
+ERROR 2020-07-18 12:05:07,150 exception 74 Invalid HTTP_HOST header: '127.0.0.1:8000'. You may need to add '127.0.0.1' to ALLOWED_HOSTS.
+WARNING 2020-07-18 12:05:07,370 basehttp 124 "GET / HTTP/1.1" 400 70077
+ERROR 2020-07-18 12:05:07,695 exception 74 Invalid HTTP_HOST header: '127.0.0.1:8000'. You may need to add '127.0.0.1' to ALLOWED_HOSTS.
+WARNING 2020-07-18 12:05:07,756 basehttp 124 "GET /favicon.ico HTTP/1.1" 400 69990
+WARNING 2020-07-18 12:05:18,065 base 93 Not Found: /media/course/course-cover.jpeg
+WARNING 2020-07-18 12:05:18,074 base 93 Not Found: /media/course/2.jpeg
+WARNING 2020-07-18 12:05:18,076 basehttp 124 "GET /media/course/course-cover.jpeg HTTP/1.1" 404 1850
+WARNING 2020-07-18 12:05:18,078 basehttp 124 "GET /media/course/2.jpeg HTTP/1.1" 404 1817
+ERROR 2020-07-18 12:05:34,770 basehttp 124 "GET /media/video/1.mp4 HTTP/1.1" 500 59
+ERROR 2020-07-18 12:16:13,212 basehttp 124 "GET /media/video/1.mp4 HTTP/1.1" 500 59
+ERROR 2020-07-18 12:18:10,471 basehttp 124 "GET /media/video/1.mp4 HTTP/1.1" 500 59
+WARNING 2020-07-18 12:18:24,230 base 93 Not Found: /media/course/course-cover.jpeg
+WARNING 2020-07-18 12:18:24,235 base 93 Not Found: /media/course/2.jpeg
+WARNING 2020-07-18 12:18:24,236 basehttp 124 "GET /media/course/course-cover.jpeg HTTP/1.1" 404 1850
+WARNING 2020-07-18 12:18:24,237 basehttp 124 "GET /media/course/2.jpeg HTTP/1.1" 404 1817
+ERROR 2020-07-18 12:18:43,282 basehttp 124 "GET /media/video/1.mp4 HTTP/1.1" 500 59
+ERROR 2020-07-18 12:20:03,174 basehttp 124 "GET /media/video/1.mp4 HTTP/1.1" 500 59
+ERROR 2020-07-18 12:22:12,858 basehttp 124 "GET /media/video/1.mp4 HTTP/1.1" 500 59
+ERROR 2020-07-18 12:24:03,448 basehttp 124 "GET /media/video/1.mp4 HTTP/1.1" 500 59
+ERROR 2020-07-18 12:24:16,530 basehttp 124 "GET /media/video/1.mp4 HTTP/1.1" 500 59
+WARNING 2020-07-18 12:24:21,275 base 93 Not Found: /media/course/2.jpeg
+WARNING 2020-07-18 12:24:21,278 base 93 Not Found: /media/course/course-cover.jpeg
+WARNING 2020-07-18 12:24:21,279 basehttp 124 "GET /media/course/course-cover.jpeg HTTP/1.1" 404 1850
+WARNING 2020-07-18 12:24:21,279 basehttp 124 "GET /media/course/2.jpeg HTTP/1.1" 404 1817
+ERROR 2020-07-18 12:24:38,128 basehttp 124 "GET /media/video/1.mp4 HTTP/1.1" 500 59
+ERROR 2020-07-18 12:28:25,963 basehttp 124 "GET /media/video/1.mp4 HTTP/1.1" 500 59
+ERROR 2020-07-18 12:28:53,230 basehttp 124 "GET /media/video/1.mp4 HTTP/1.1" 500 59
+ERROR 2020-07-18 12:32:36,229 basehttp 124 "GET /media/video/1.mp4 HTTP/1.1" 500 59
+ERROR 2020-07-18 12:42:49,791 basehttp 124 "GET /media/video/1.mp4 HTTP/1.1" 500 59
+WARNING 2020-07-18 12:42:57,860 basehttp 124 "POST /course/issue/ HTTP/1.1" 401 88
+WARNING 2020-07-18 12:44:06,834 basehttp 124 "POST /course/issue/ HTTP/1.1" 401 88
+ERROR 2020-07-18 12:44:41,049 basehttp 124 "GET /media/video/1.mp4 HTTP/1.1" 500 59
+WARNING 2020-07-18 12:45:27,392 basehttp 124 "POST /course/issue/ HTTP/1.1" 401 38
+ERROR 2020-07-18 12:45:28,520 basehttp 124 "GET /media/video/1.mp4 HTTP/1.1" 500 59
+ERROR 2020-07-18 12:46:01,748 basehttp 124 "GET /media/video/1.mp4 HTTP/1.1" 500 59
+ERROR 2020-07-18 14:06:43,145 basehttp 124 "GET /media/video/1.mp4 HTTP/1.1" 500 59
+WARNING 2020-07-18 14:07:21,813 base 93 Not Found: /favicon.ico
+WARNING 2020-07-18 14:07:21,814 basehttp 124 "GET /favicon.ico HTTP/1.1" 404 2643
+WARNING 2020-07-18 14:07:32,655 basehttp 124 "GET /course/comment/ HTTP/1.1" 400 7058
+WARNING 2020-07-18 14:08:32,260 basehttp 124 "GET /course/comment/?courese_id=1 HTTP/1.1" 400 7144
+ERROR 2020-07-18 14:12:21,344 basehttp 124 "GET /media/video/1.mp4 HTTP/1.1" 500 59
+ERROR 2020-07-18 14:12:44,308 views 134 评论存储失败
+ERROR 2020-07-18 14:12:44,471 basehttp 124 "GET /course/comment/ HTTP/1.1" 507 7064
+ERROR 2020-07-18 14:14:33,070 views 134 获取评论列表失败
+ERROR 2020-07-18 14:14:33,339 basehttp 124 "GET /course/comment/ HTTP/1.1" 507 7064
+ERROR 2020-07-18 14:15:24,595 views 134 获取评论列表失败
+ERROR 2020-07-18 14:15:24,638 basehttp 124 "GET /course/comment/ HTTP/1.1" 507 7064
+ERROR 2020-07-18 14:16:55,978 views 134 获取评论列表失败
+ERROR 2020-07-18 14:16:56,144 basehttp 124 "GET /course/comment/ HTTP/1.1" 507 7064
+ERROR 2020-07-18 14:22:49,696 views 142 获取评论列表失败
+ERROR 2020-07-18 14:22:49,766 basehttp 124 "GET /course/comment/ HTTP/1.1" 507 7064
+ERROR 2020-07-18 14:23:32,599 views 142 获取评论列表失败
+ERROR 2020-07-18 14:23:32,784 basehttp 124 "GET /course/comment/ HTTP/1.1" 507 7064
+ERROR 2020-07-18 14:36:01,513 basehttp 124 "GET /media/video/1.mp4 HTTP/1.1" 500 59
+ERROR 2020-07-18 14:36:31,086 basehttp 124 "GET /media/video/1.mp4 HTTP/1.1" 500 59
+ERROR 2020-07-18 14:45:46,928 basehttp 124 "GET /media/video/1.mp4 HTTP/1.1" 500 59
+ERROR 2020-07-18 14:50:42,448 basehttp 124 "GET /media/video/1.mp4 HTTP/1.1" 500 59
+ERROR 2020-07-18 14:51:23,067 basehttp 124 "GET /media/video/1.mp4 HTTP/1.1" 500 59
+ERROR 2020-07-18 14:55:11,638 basehttp 124 "GET /media/video/1.mp4 HTTP/1.1" 500 59
+ERROR 2020-07-18 14:56:44,622 basehttp 124 "GET /media/video/1.mp4 HTTP/1.1" 500 59
+ERROR 2020-07-18 14:57:58,722 basehttp 124 "GET /media/video/1.mp4 HTTP/1.1" 500 59
+ERROR 2020-07-18 15:03:58,862 basehttp 124 "GET /media/video/1.mp4 HTTP/1.1" 500 59
+ERROR 2020-07-18 15:06:45,713 basehttp 124 "GET /media/video/1.mp4 HTTP/1.1" 500 59
+ERROR 2020-07-18 15:07:44,653 basehttp 124 "GET /media/video/1.mp4 HTTP/1.1" 500 59
+ERROR 2020-07-18 15:08:30,808 basehttp 124 "GET /media/video/1.mp4 HTTP/1.1" 500 59
+ERROR 2020-07-18 15:10:59,281 basehttp 124 "GET /media/video/1.mp4 HTTP/1.1" 500 59
+WARNING 2020-07-18 15:12:36,177 basehttp 124 "GET /course/comment/ HTTP/1.1" 400 44
+ERROR 2020-07-18 15:12:51,277 basehttp 124 "GET /media/video/1.mp4 HTTP/1.1" 500 59
+ERROR 2020-07-18 15:14:14,148 basehttp 124 "GET /media/video/1.mp4 HTTP/1.1" 500 59
+ERROR 2020-07-18 15:17:18,373 basehttp 124 "GET /media/video/1.mp4 HTTP/1.1" 500 59
+ERROR 2020-07-18 15:19:18,129 basehttp 124 "GET /media/video/1.mp4 HTTP/1.1" 500 59
+ERROR 2020-07-18 15:19:47,608 basehttp 124 "GET /media/video/1.mp4 HTTP/1.1" 500 59
+ERROR 2020-07-18 15:20:03,156 basehttp 124 "GET /media/video/1.mp4 HTTP/1.1" 500 59
+ERROR 2020-07-18 15:22:47,099 basehttp 124 "GET /media/video/1.mp4 HTTP/1.1" 500 59
+ERROR 2020-07-18 15:30:14,130 basehttp 124 "GET /media/video/1.mp4 HTTP/1.1" 500 59
+ERROR 2020-07-18 15:32:50,433 basehttp 124 "GET /media/video/1.mp4 HTTP/1.1" 500 59
+ERROR 2020-07-18 15:34:55,741 basehttp 124 "GET /media/video/1.mp4 HTTP/1.1" 500 59
+ERROR 2020-07-18 15:36:04,858 basehttp 124 "GET /media/video/1.mp4 HTTP/1.1" 500 59
+ERROR 2020-07-18 15:36:22,915 basehttp 124 "GET /media/video/1.mp4 HTTP/1.1" 500 59
+ERROR 2020-07-18 15:37:31,290 basehttp 124 "GET /media/video/1.mp4 HTTP/1.1" 500 59
+ERROR 2020-07-18 15:37:56,751 basehttp 124 "GET /media/video/1.mp4 HTTP/1.1" 500 59
+ERROR 2020-07-18 15:40:24,081 basehttp 124 "GET /media/video/1.mp4 HTTP/1.1" 500 59
+ERROR 2020-07-18 15:41:16,344 basehttp 124 "GET /media/video/1.mp4 HTTP/1.1" 500 59
+WARNING 2020-07-18 15:43:08,138 base 93 Not Found: /media/course/2.jpeg
+WARNING 2020-07-18 15:43:08,139 basehttp 124 "GET /media/course/2.jpeg HTTP/1.1" 404 1817
+ERROR 2020-07-18 15:44:40,241 basehttp 124 "GET /media/video/1.mp4 HTTP/1.1" 500 59
+ERROR 2020-07-18 15:47:18,299 basehttp 124 "GET /media/video/1.mp4 HTTP/1.1" 500 59
+ERROR 2020-07-18 15:48:01,936 basehttp 124 "GET /media/video/1.mp4 HTTP/1.1" 500 59
+ERROR 2020-07-18 15:48:13,174 basehttp 124 "GET /media/video/1.mp4 HTTP/1.1" 500 59
+WARNING 2020-07-18 15:48:13,502 base 93 Not Found: /media/course/2.jpeg
+WARNING 2020-07-18 15:48:13,504 basehttp 124 "GET /media/course/2.jpeg HTTP/1.1" 404 1817
+WARNING 2020-07-18 15:49:08,570 base 93 Not Found: /media/course/2.jpeg
+WARNING 2020-07-18 15:49:08,571 basehttp 124 "GET /media/course/2.jpeg HTTP/1.1" 404 1817
+WARNING 2020-07-18 18:11:18,246 base 93 Not Found: /media/course/2.jpeg
+WARNING 2020-07-18 18:11:18,248 basehttp 124 "GET /media/course/2.jpeg HTTP/1.1" 404 1817
+WARNING 2020-07-18 18:24:38,008 base 93 Not Found: /media/course/2.jpeg
+WARNING 2020-07-18 18:24:38,011 basehttp 124 "GET /media/course/2.jpeg HTTP/1.1" 404 1817
+WARNING 2020-07-18 18:38:33,929 base 93 Not Found: /media/course/2.jpeg
+WARNING 2020-07-18 18:38:33,931 basehttp 124 "GET /media/course/2.jpeg HTTP/1.1" 404 1817
+WARNING 2020-07-18 18:43:31,126 base 93 Not Found: /media/course/2.jpeg
+WARNING 2020-07-18 18:43:31,130 basehttp 124 "GET /media/course/2.jpeg HTTP/1.1" 404 1817
+WARNING 2020-07-18 18:45:41,398 base 93 Not Found: /media/course/2.jpeg
+WARNING 2020-07-18 18:45:41,398 basehttp 124 "GET /media/course/2.jpeg HTTP/1.1" 404 1817
+WARNING 2020-07-18 18:47:31,379 base 93 Not Found: /media/course/2.jpeg
+WARNING 2020-07-18 18:47:31,379 basehttp 124 "GET /media/course/2.jpeg HTTP/1.1" 404 1817
+WARNING 2020-07-18 18:47:56,829 base 93 Not Found: /media/course/2.jpeg
+WARNING 2020-07-18 18:47:56,833 basehttp 124 "GET /media/course/2.jpeg HTTP/1.1" 404 1817
+WARNING 2020-07-18 18:48:14,621 base 93 Not Found: /media/course/2.jpeg
+WARNING 2020-07-18 18:48:14,621 basehttp 124 "GET /media/course/2.jpeg HTTP/1.1" 404 1817
+WARNING 2020-07-18 18:48:50,976 base 93 Not Found: /media/course/2.jpeg
+WARNING 2020-07-18 18:48:50,976 basehttp 124 "GET /media/course/2.jpeg HTTP/1.1" 404 1817
+WARNING 2020-07-18 18:49:14,257 base 93 Not Found: /media/course/2.jpeg
+WARNING 2020-07-18 18:49:14,257 basehttp 124 "GET /media/course/2.jpeg HTTP/1.1" 404 1817
+WARNING 2020-07-18 18:49:41,721 base 93 Not Found: /media/course/2.jpeg
+WARNING 2020-07-18 18:49:41,723 basehttp 124 "GET /media/course/2.jpeg HTTP/1.1" 404 1817
+WARNING 2020-07-18 18:53:39,390 base 93 Not Found: /media/course/2.jpeg
+WARNING 2020-07-18 18:53:39,390 basehttp 124 "GET /media/course/2.jpeg HTTP/1.1" 404 1817
+WARNING 2020-07-18 18:53:58,013 base 93 Not Found: /media/course/2.jpeg
+WARNING 2020-07-18 18:53:58,014 basehttp 124 "GET /media/course/2.jpeg HTTP/1.1" 404 1817
+WARNING 2020-07-18 18:54:55,763 base 93 Not Found: /media/course/2.jpeg
+WARNING 2020-07-18 18:54:55,763 basehttp 124 "GET /media/course/2.jpeg HTTP/1.1" 404 1817
+WARNING 2020-07-18 18:55:24,358 base 93 Not Found: /media/course/2.jpeg
+WARNING 2020-07-18 18:55:24,360 basehttp 124 "GET /media/course/2.jpeg HTTP/1.1" 404 1817
+WARNING 2020-07-18 18:56:38,367 base 93 Not Found: /media/course/2.jpeg
+WARNING 2020-07-18 18:56:38,367 basehttp 124 "GET /media/course/2.jpeg HTTP/1.1" 404 1817
+WARNING 2020-07-18 18:56:44,642 base 93 Not Found: /media/course/2.jpeg
+WARNING 2020-07-18 18:56:44,642 basehttp 124 "GET /media/course/2.jpeg HTTP/1.1" 404 1817
+WARNING 2020-07-18 18:57:36,708 base 93 Not Found: /media/course/2.jpeg
+WARNING 2020-07-18 18:57:36,710 basehttp 124 "GET /media/course/2.jpeg HTTP/1.1" 404 1817
+WARNING 2020-07-18 19:13:36,324 base 93 Not Found: /media/course/2.jpeg
+WARNING 2020-07-18 19:13:36,325 basehttp 124 "GET /media/course/2.jpeg HTTP/1.1" 404 1817
+WARNING 2020-07-18 19:16:22,982 base 93 Not Found: /media/course/2.jpeg
+WARNING 2020-07-18 19:16:22,986 basehttp 124 "GET /media/course/2.jpeg HTTP/1.1" 404 1817
+WARNING 2020-07-18 19:17:19,710 base 93 Not Found: /media/course/2.jpeg
+WARNING 2020-07-18 19:17:19,711 basehttp 124 "GET /media/course/2.jpeg HTTP/1.1" 404 1817
+WARNING 2020-07-18 19:26:31,931 base 93 Not Found: /media/course/2.jpeg
+WARNING 2020-07-18 19:26:31,931 basehttp 124 "GET /media/course/2.jpeg HTTP/1.1" 404 1817
+WARNING 2020-07-18 19:27:02,837 base 93 Not Found: /media/course/2.jpeg
+WARNING 2020-07-18 19:27:02,840 basehttp 124 "GET /media/course/2.jpeg HTTP/1.1" 404 1817
+WARNING 2020-07-18 19:28:26,109 base 93 Not Found: /media/course/2.jpeg
+WARNING 2020-07-18 19:28:26,112 basehttp 124 "GET /media/course/2.jpeg HTTP/1.1" 404 1817
+WARNING 2020-07-18 19:28:34,495 base 93 Not Found: /media/course/2.jpeg
+WARNING 2020-07-18 19:28:34,498 basehttp 124 "GET /media/course/2.jpeg HTTP/1.1" 404 1817
+WARNING 2020-07-18 19:29:33,901 base 93 Not Found: /media/course/2.jpeg
+WARNING 2020-07-18 19:29:33,903 basehttp 124 "GET /media/course/2.jpeg HTTP/1.1" 404 1817
+WARNING 2020-07-18 19:29:47,897 base 93 Not Found: /media/course/2.jpeg
+WARNING 2020-07-18 19:29:47,899 basehttp 124 "GET /media/course/2.jpeg HTTP/1.1" 404 1817
+ERROR 2020-07-18 19:29:57,028 basehttp 124 "PUT /cart/option_all/ HTTP/1.1" 500 59
+ERROR 2020-07-18 19:29:57,032 basehttp 124 "PUT /cart/option_all/ HTTP/1.1" 500 59
+ERROR 2020-07-18 19:29:57,034 basehttp 124 "PUT /cart/option_all/ HTTP/1.1" 500 59
+ERROR 2020-07-18 19:29:57,037 basehttp 124 "PUT /cart/option_all/ HTTP/1.1" 500 59
+ERROR 2020-07-18 19:29:57,041 basehttp 124 "PUT /cart/option_all/ HTTP/1.1" 500 59
+ERROR 2020-07-18 19:29:57,049 basehttp 124 "PUT /cart/option_all/ HTTP/1.1" 500 59
+WARNING 2020-07-18 19:30:25,961 base 93 Not Found: /media/course/2.jpeg
+WARNING 2020-07-18 19:30:25,963 basehttp 124 "GET /media/course/2.jpeg HTTP/1.1" 404 1817
+WARNING 2020-07-18 19:40:07,501 base 93 Not Found: /media/course/2.jpeg
+WARNING 2020-07-18 19:40:07,505 basehttp 124 "GET /media/course/2.jpeg HTTP/1.1" 404 1817
+WARNING 2020-07-18 19:42:03,542 base 93 Not Found: /media/course/2.jpeg
+WARNING 2020-07-18 19:42:03,543 basehttp 124 "GET /media/course/2.jpeg HTTP/1.1" 404 1817
+WARNING 2020-07-18 19:42:26,895 base 93 Not Found: /media/course/2.jpeg
+WARNING 2020-07-18 19:42:26,896 basehttp 124 "GET /media/course/2.jpeg HTTP/1.1" 404 1817
+WARNING 2020-07-18 19:43:44,919 base 93 Not Found: /media/course/2.jpeg
+WARNING 2020-07-18 19:43:44,920 basehttp 124 "GET /media/course/2.jpeg HTTP/1.1" 404 1817
+WARNING 2020-07-18 19:45:35,189 base 93 Not Found: /media/course/2.jpeg
+WARNING 2020-07-18 19:45:35,191 basehttp 124 "GET /media/course/2.jpeg HTTP/1.1" 404 1817
+WARNING 2020-07-18 19:47:01,677 base 93 Not Found: /media/course/2.jpeg
+WARNING 2020-07-18 19:47:01,678 basehttp 124 "GET /media/course/2.jpeg HTTP/1.1" 404 1817
+WARNING 2020-07-18 19:59:37,263 base 93 Not Found: /media/course/2.jpeg
+WARNING 2020-07-18 19:59:37,265 basehttp 124 "GET /media/course/2.jpeg HTTP/1.1" 404 1817
+WARNING 2020-07-18 20:02:40,523 base 93 Not Found: /media/course/2.jpeg
+WARNING 2020-07-18 20:02:40,524 basehttp 124 "GET /media/course/2.jpeg HTTP/1.1" 404 1817
+WARNING 2020-07-18 20:02:46,186 base 93 Not Found: /media/course/2.jpeg
+WARNING 2020-07-18 20:02:46,188 basehttp 124 "GET /media/course/2.jpeg HTTP/1.1" 404 1817
+WARNING 2020-07-18 20:04:10,968 base 93 Not Found: /media/course/2.jpeg
+WARNING 2020-07-18 20:04:10,969 basehttp 124 "GET /media/course/2.jpeg HTTP/1.1" 404 1817
+WARNING 2020-07-18 20:05:26,773 base 93 Not Found: /media/course/2.jpeg
+WARNING 2020-07-18 20:05:26,774 basehttp 124 "GET /media/course/2.jpeg HTTP/1.1" 404 1817
+WARNING 2020-07-18 20:06:59,799 base 93 Not Found: /media/course/2.jpeg
+WARNING 2020-07-18 20:06:59,800 basehttp 124 "GET /media/course/2.jpeg HTTP/1.1" 404 1817
+WARNING 2020-07-18 20:07:48,448 base 93 Not Found: /media/course/2.jpeg
+WARNING 2020-07-18 20:07:48,449 basehttp 124 "GET /media/course/2.jpeg HTTP/1.1" 404 1817
+WARNING 2020-07-18 20:07:59,253 base 93 Not Found: /media/course/2.jpeg
+WARNING 2020-07-18 20:07:59,254 basehttp 124 "GET /media/course/2.jpeg HTTP/1.1" 404 1817
+WARNING 2020-07-18 20:09:11,959 base 93 Not Found: /media/course/2.jpeg
+WARNING 2020-07-18 20:09:11,960 basehttp 124 "GET /media/course/2.jpeg HTTP/1.1" 404 1817
+WARNING 2020-07-18 20:09:17,999 base 93 Not Found: /media/course/2.jpeg
+WARNING 2020-07-18 20:09:18,000 basehttp 124 "GET /media/course/2.jpeg HTTP/1.1" 404 1817
+WARNING 2020-07-18 20:10:42,639 base 93 Not Found: /media/course/2.jpeg
+WARNING 2020-07-18 20:10:42,639 basehttp 124 "GET /media/course/2.jpeg HTTP/1.1" 404 1817
+WARNING 2020-07-18 20:12:04,252 base 93 Not Found: /media/course/2.jpeg
+WARNING 2020-07-18 20:12:04,254 basehttp 124 "GET /media/course/2.jpeg HTTP/1.1" 404 1817
+WARNING 2020-07-18 20:12:10,722 base 93 Not Found: /media/course/2.jpeg
+WARNING 2020-07-18 20:12:10,723 basehttp 124 "GET /media/course/2.jpeg HTTP/1.1" 404 1817
+WARNING 2020-07-18 20:12:40,558 base 93 Not Found: /media/course/2.jpeg
+WARNING 2020-07-18 20:12:40,559 basehttp 124 "GET /media/course/2.jpeg HTTP/1.1" 404 1817
+WARNING 2020-07-18 20:12:40,577 base 93 Not Found: /media/course/course-cover.jpeg
+WARNING 2020-07-18 20:12:40,578 basehttp 124 "GET /media/course/course-cover.jpeg HTTP/1.1" 404 1850
+WARNING 2020-07-18 20:12:43,136 base 93 Not Found: /media/course/course-cover.jpeg
+WARNING 2020-07-18 20:12:43,143 basehttp 124 "GET /media/course/course-cover.jpeg HTTP/1.1" 404 1850
+WARNING 2020-07-18 20:12:46,177 base 93 Not Found: /media/course/2.jpeg
+WARNING 2020-07-18 20:12:46,187 base 93 Not Found: /media/course/course-cover.jpeg
+WARNING 2020-07-18 20:12:46,187 basehttp 124 "GET /media/course/2.jpeg HTTP/1.1" 404 1817
+WARNING 2020-07-18 20:12:46,188 basehttp 124 "GET /media/course/course-cover.jpeg HTTP/1.1" 404 1850
+WARNING 2020-07-19 09:52:28,790 basehttp 124 "GET /course/comment/ HTTP/1.1" 400 8124
+WARNING 2020-07-19 09:52:29,157 base 93 Not Found: /favicon.ico
+WARNING 2020-07-19 09:52:29,161 basehttp 124 "GET /favicon.ico HTTP/1.1" 404 2643
+WARNING 2020-07-19 09:54:08,336 base 93 Not Found: /media/course/2.jpeg
+WARNING 2020-07-19 09:54:08,337 basehttp 124 "GET /media/course/2.jpeg HTTP/1.1" 404 1817
+WARNING 2020-07-19 09:57:24,338 base 93 Not Found: /media/course/2.jpeg
+WARNING 2020-07-19 09:57:24,339 basehttp 124 "GET /media/course/2.jpeg HTTP/1.1" 404 1817
+WARNING 2020-07-19 09:58:49,964 base 93 Not Found: /media/course/2.jpeg
+WARNING 2020-07-19 09:58:49,965 basehttp 124 "GET /media/course/2.jpeg HTTP/1.1" 404 1817
+WARNING 2020-07-19 09:59:45,247 base 93 Not Found: /media/course/2.jpeg
+WARNING 2020-07-19 09:59:45,248 basehttp 124 "GET /media/course/2.jpeg HTTP/1.1" 404 1817
+WARNING 2020-07-19 10:00:02,506 base 93 Not Found: /media/course/2.jpeg
+WARNING 2020-07-19 10:00:02,507 basehttp 124 "GET /media/course/2.jpeg HTTP/1.1" 404 1817
+WARNING 2020-07-19 10:01:06,084 base 93 Not Found: /media/course/2.jpeg
+WARNING 2020-07-19 10:01:06,085 basehttp 124 "GET /media/course/2.jpeg HTTP/1.1" 404 1817
+WARNING 2020-07-19 10:01:10,448 base 93 Not Found: /media/course/2.jpeg
+WARNING 2020-07-19 10:01:10,449 basehttp 124 "GET /media/course/2.jpeg HTTP/1.1" 404 1817
+WARNING 2020-07-19 10:01:17,791 base 93 Not Found: /media/course/2.jpeg
+WARNING 2020-07-19 10:01:17,792 basehttp 124 "GET /media/course/2.jpeg HTTP/1.1" 404 1817
+WARNING 2020-07-19 10:01:47,909 base 93 Not Found: /media/course/2.jpeg
+WARNING 2020-07-19 10:01:47,911 basehttp 124 "GET /media/course/2.jpeg HTTP/1.1" 404 1817
+WARNING 2020-07-19 10:03:00,106 base 93 Not Found: /media/course/2.jpeg
+WARNING 2020-07-19 10:03:00,107 basehttp 124 "GET /media/course/2.jpeg HTTP/1.1" 404 1817
+WARNING 2020-07-19 10:03:23,028 base 93 Not Found: /media/course/2.jpeg
+WARNING 2020-07-19 10:03:23,029 basehttp 124 "GET /media/course/2.jpeg HTTP/1.1" 404 1817
+WARNING 2020-07-19 10:03:43,828 base 93 Not Found: /media/course/2.jpeg
+WARNING 2020-07-19 10:03:43,829 basehttp 124 "GET /media/course/2.jpeg HTTP/1.1" 404 1817
+WARNING 2020-07-19 19:21:16,140 basehttp 124 "POST /order/option/ HTTP/1.1" 400 22
+WARNING 2020-07-19 19:22:47,980 basehttp 124 "POST /order/option/ HTTP/1.1" 400 22
+WARNING 2020-07-19 19:23:15,753 basehttp 124 "POST /order/option/ HTTP/1.1" 400 22
+WARNING 2020-07-19 19:24:41,940 basehttp 124 "POST /order/option/ HTTP/1.1" 400 22
+WARNING 2020-07-19 19:25:13,861 basehttp 124 "POST /order/option/ HTTP/1.1" 400 22
+ERROR 2020-07-19 19:25:50,830 exceptions 15 <order.views.OrderApiView object at 0x000002407EF231D0>--POST--Cannot assign "1": "Order.user" must be a "UserInfo" instance.
+ERROR 2020-07-19 19:25:50,834 basehttp 124 "POST /order/option/ HTTP/1.1" 500 67
+WARNING 2020-07-19 19:35:07,274 basehttp 124 "POST /order/option/ HTTP/1.1" 400 22
+ERROR 2020-07-19 19:36:25,028 basehttp 124 "POST /order/option/ HTTP/1.1" 500 59
+ERROR 2020-07-19 19:43:16,596 basehttp 124 "GET /cart/option_all/ HTTP/1.1" 500 59
+WARNING 2020-07-19 20:01:04,766 basehttp 124 "GET /order/option/ HTTP/1.1" 405 45
+WARNING 2020-07-19 20:03:27,613 basehttp 124 "GET /cart/option_all/ HTTP/1.1" 401 43
+WARNING 2020-07-19 20:03:32,458 basehttp 124 "GET /cart/option_all/ HTTP/1.1" 401 43
+WARNING 2020-07-19 20:03:36,303 basehttp 124 "GET /cart/option_all/ HTTP/1.1" 401 43
+WARNING 2020-07-19 20:04:22,421 basehttp 124 "GET /cart/option_all/ HTTP/1.1" 401 43
+WARNING 2020-07-19 20:05:01,018 basehttp 124 "GET /order/option/ HTTP/1.1" 405 45
+WARNING 2020-07-19 20:06:09,891 basehttp 124 "GET /order/option/ HTTP/1.1" 405 45
+WARNING 2020-07-19 20:06:30,311 basehttp 124 "GET /order/option/ HTTP/1.1" 405 45
+ERROR 2020-07-19 20:09:13,861 exceptions 15 <order.views.OrderApiView object at 0x000001D9F86D28D0>--POST--%d format: a number is required, not NoneType
+ERROR 2020-07-19 20:09:13,862 basehttp 124 "POST /order/option/ HTTP/1.1" 500 67
+WARNING 2020-07-19 20:09:29,757 basehttp 124 "POST /order/option/ HTTP/1.1" 400 22
+ERROR 2020-07-19 20:10:08,855 basehttp 124 "POST /order/option/ HTTP/1.1" 500 59
+WARNING 2020-07-19 20:11:25,025 base 93 Not Found: /media/course/2.jpeg
+WARNING 2020-07-19 20:11:25,028 base 93 Not Found: /media/course/course-cover.jpeg
+WARNING 2020-07-19 20:11:25,029 basehttp 124 "GET /media/course/2.jpeg HTTP/1.1" 404 1817
+WARNING 2020-07-19 20:11:25,030 basehttp 124 "GET /media/course/course-cover.jpeg HTTP/1.1" 404 1850
+WARNING 2020-07-19 20:11:27,181 base 93 Not Found: /media/course/course-cover.jpeg
+WARNING 2020-07-19 20:11:27,182 basehttp 124 "GET /media/course/course-cover.jpeg HTTP/1.1" 404 1850
+WARNING 2020-07-19 20:11:28,868 base 93 Not Found: /media/course/course-cover.jpeg
+WARNING 2020-07-19 20:11:28,870 basehttp 124 "GET /media/course/course-cover.jpeg HTTP/1.1" 404 1850
+WARNING 2020-07-19 20:11:30,325 base 93 Not Found: /media/course/course-cover.jpeg
+WARNING 2020-07-19 20:11:30,327 basehttp 124 "GET /media/course/course-cover.jpeg HTTP/1.1" 404 1850
+WARNING 2020-07-19 20:16:29,831 base 93 Not Found: /media/course/2.jpeg
+WARNING 2020-07-19 20:16:29,832 basehttp 124 "GET /media/course/2.jpeg HTTP/1.1" 404 1817
+WARNING 2020-07-19 20:16:32,791 base 93 Not Found: /media/course/2.jpeg
+WARNING 2020-07-19 20:16:32,793 basehttp 124 "GET /media/course/2.jpeg HTTP/1.1" 404 1817
+WARNING 2020-07-19 20:16:36,869 base 93 Not Found: /media/course/2.jpeg
+WARNING 2020-07-19 20:16:36,870 basehttp 124 "GET /media/course/2.jpeg HTTP/1.1" 404 1817
+WARNING 2020-07-19 20:16:38,150 base 93 Not Found: /media/course/2.jpeg
+WARNING 2020-07-19 20:16:38,151 basehttp 124 "GET /media/course/2.jpeg HTTP/1.1" 404 1817
+WARNING 2020-07-20 08:20:51,973 base 93 Not Found: /media/course/2452c9d2-3539-447b-a98a-99378a750dee.png
+WARNING 2020-07-20 08:20:51,988 basehttp 124 "GET /media/course/2452c9d2-3539-447b-a98a-99378a750dee.png HTTP/1.1" 404 1919
+WARNING 2020-07-20 08:20:55,014 base 93 Not Found: /media/course/2452c9d2-3539-447b-a98a-99378a750dee.png
+WARNING 2020-07-20 08:20:55,020 basehttp 124 "GET /media/course/2452c9d2-3539-447b-a98a-99378a750dee.png HTTP/1.1" 404 1919
+WARNING 2020-07-20 08:20:58,598 base 93 Not Found: /media/course/2452c9d2-3539-447b-a98a-99378a750dee.png
+WARNING 2020-07-20 08:20:58,599 basehttp 124 "GET /media/course/2452c9d2-3539-447b-a98a-99378a750dee.png HTTP/1.1" 404 1919
+WARNING 2020-07-20 08:21:16,813 base 93 Not Found: /media/course/2452c9d2-3539-447b-a98a-99378a750dee.png
+WARNING 2020-07-20 08:21:16,826 basehttp 124 "GET /media/course/2452c9d2-3539-447b-a98a-99378a750dee.png HTTP/1.1" 404 1919
+WARNING 2020-07-20 08:21:22,819 base 93 Not Found: /media/course/2452c9d2-3539-447b-a98a-99378a750dee.png
+WARNING 2020-07-20 08:21:22,820 basehttp 124 "GET /media/course/2452c9d2-3539-447b-a98a-99378a750dee.png HTTP/1.1" 404 1919
+WARNING 2020-07-20 08:21:26,874 base 93 Not Found: /media/course/2452c9d2-3539-447b-a98a-99378a750dee.png
+WARNING 2020-07-20 08:21:26,876 basehttp 124 "GET /media/course/2452c9d2-3539-447b-a98a-99378a750dee.png HTTP/1.1" 404 1919
+WARNING 2020-07-20 08:21:53,418 base 93 Not Found: /favicon.ico
+WARNING 2020-07-20 08:21:53,419 basehttp 124 "GET /favicon.ico HTTP/1.1" 404 2749
+WARNING 2020-07-20 08:22:33,633 base 93 Not Found: /media/course/course-cover.jpeg
+WARNING 2020-07-20 08:22:33,639 base 93 Not Found: /media/course/2.jpeg
+WARNING 2020-07-20 08:22:33,639 basehttp 124 "GET /media/course/course-cover.jpeg HTTP/1.1" 404 1850
+WARNING 2020-07-20 08:22:33,640 basehttp 124 "GET /media/course/2.jpeg HTTP/1.1" 404 1817
+ERROR 2020-07-20 08:22:50,556 basehttp 124 "GET /media/video/1.mp4 HTTP/1.1" 500 59
+ERROR 2020-07-20 08:23:09,505 basehttp 124 "GET /media/video/1.mp4 HTTP/1.1" 500 59

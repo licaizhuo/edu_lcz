@@ -43,12 +43,17 @@
                         <ul class="lesson-list">
                             <li v-for="(lesson,key) in course.lesson_list" :key="key">
                                 <span class="lesson-title">{{key+1}} | 第{{key+1}}节：{{lesson.name}}</span>
-                                <span class="free" v-if="lesson.free_trail">免费</span></li>
+                                <span class="free" v-show="lesson.free_trail">免费</span></li>
                         </ul>
-                        <div class="pay-box">
-                            <span class="discount-type">限时免费</span>
-                            <span class="discount-price">￥0.00元</span>
-                            <span class="original-price">原价：{{course.price}}元</span>
+                        <div class="pay-box" v-if="course.real_price !== course.price">
+                            <span class="discount-type" v-show="course.discount_name">{{course.discount_name}}</span>
+                            <span class="discount-price">¥{{course.real_price}}元</span>
+                            <span class="original-price">原价：¥{{course.price}}元</span>
+                            <span class="buy-now">立即购买</span>
+                        </div>
+                        <div class="pay-box" v-else>
+                            <span class="discount-type" v-show="course.discount_name">{{course.discount_name}}</span>
+                            <span class="discount-price">¥{{course.price}}元</span>
                             <span class="buy-now">立即购买</span>
                         </div>
                     </div>
@@ -100,6 +105,7 @@
             },
         },
         methods: {
+            //获取所有的课程分类
             get_all_category() {
                 this.$axios.get(this.$settings.HOST + "course/category/").then(res => {
                     this.list_category = res.data;
@@ -107,18 +113,21 @@
                     this.$message.error('出现错误了，请您刷新页面~')
                 })
             },
+            //获取所有的课程
             get_course_list() {
                 let filters = {
+                    //分页的条件，page页数，size每页的个数
                     page: this.filters.page,
                     size: this.filters.size,
                 };
 
                 if (this.filters.orders === "desc") {
+                    //排序所需的条件 type包括id，
                     filters.ordering = "-" + this.filters.type;
                 } else {
                     filters.ordering = this.filters.type;
                 }
-
+                //全部的category 是0，，其他的是分类对应的id
                 if (this.category > 0) {
                     filters.course_category = this.category;
                 }

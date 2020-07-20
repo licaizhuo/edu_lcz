@@ -40,3 +40,43 @@ class TeacherLessonModelAdmin(object):
 
 
 xadmin.site.register(Teacher, TeacherLessonModelAdmin)
+
+
+class CourseDiscountTypeModelAdmin(object):
+    """课程优惠类型"""
+    pass
+
+
+xadmin.site.register(CourseDiscountType, CourseDiscountTypeModelAdmin)
+
+
+class CourseDiscountModelAdmin(object):
+    """课程优惠折扣模型（价格优惠公式）"""
+    pass
+
+
+xadmin.site.register(CourseDiscount, CourseDiscountModelAdmin)
+
+
+class ActivityModelAdmin(object):
+    """优惠活动"""
+    pass
+
+
+xadmin.site.register(Activity, ActivityModelAdmin)
+
+
+class CoursePriceDiscountModelAdmin(object):
+    """课程与优惠策略的关系"""
+    pass
+
+
+xadmin.site.register(CoursePriceDiscount, CoursePriceDiscountModelAdmin)
+
+
+class CourseExpireModelAdmin(object):
+    """课程有效期模型"""
+    pass
+
+
+xadmin.site.register(CourseExpire, CourseExpireModelAdmin)

@@ -53,7 +53,7 @@
                         this.$cookies.set("token", res.data.token, {
                             expires: token_time
                         });
-                        this.$cookies.set("user_id", res.data.user_id);
+                        this.$cookies.set("user_id", res.data.id);
                         let username =
                             this.$cookies.set("username", res.data.username);
                         this.$message.success("登入成功")

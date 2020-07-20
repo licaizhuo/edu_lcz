@@ -99,11 +99,11 @@
                 let _this = this;
                 captchaObj.onSuccess(function () {
                     var validate = captchaObj.getValidate();
-                    // console.log(validate.geetest_challenge);
                     _this.$axios({
                         url: _this.$settings.HOST + "user/captcha/",
                         method: "post",
                         data: {
+                            username: _this.username,
                             geetest_challenge: validate.geetest_challenge,
                             geetest_validate: validate.geetest_validate,
                             geetest_seccode: validate.geetest_seccode
@@ -113,12 +113,9 @@
                         if (res.data && (res.data.status === "success")) {
                             _this.login_bz()
                         }
-                        // if (res.data.status) {
-                        //     _this.login_bz()
-                        // }
 
                     }).catch(error => {
-                        _this.$message.error("出现错误，请重新登入")
+                        _this.$message.error("出现错误，请刷新页面，重新登入。")
                     })
                 });
                 document.getElementById('geetest1').innerHTML = ""

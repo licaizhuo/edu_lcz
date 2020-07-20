@@ -18,14 +18,20 @@
                 <div class="wrap-right">
                     <h3 class="course-name">{{course_info.name}}</h3>
                     <p class="data">{{course_info.students}}人在学&nbsp;&nbsp;&nbsp;&nbsp;课程总时长：{{course_info.lessons}}课时/{{course_info.pub_lessons}}小时&nbsp;&nbsp;&nbsp;&nbsp;难度：{{course_info.get_level}}</p>
-                    <div class="sale-time">
-                        <p class="sale-type">限时免费</p>
-                        <p class="expire">距离结束：仅剩 110天 13小时 33分 <span class="second">08</span> 秒</p>
+                    <div class="sale-time" v-show="course_info.discount_name">
+                        <p class="sale-type">{{course_info.discount_name}}</p>
+                        <p class="expire">距离结束：仅剩 {{parseInt(course_info.active_time/(24*3600))}}天
+                            {{parseInt((course_info.active_time/3600)%24)}}小时
+                            {{parseInt((course_info.active_time/60)%60)}}分 <span
+                                class="second">{{course_info.active_time%60}}</span> 秒</p>
                     </div>
-                    <p class="course-price">
+                    <p class="course-price" v-if="course_info.real_price!==course_info.price">
                         <span>活动价</span>
-                        <span class="discount">¥0.00</span>
-                        <span class="original">{{course_info.price}}</span>
+                        <span class="discount">¥{{course_info.real_price}}</span>
+                        <span class="original">¥{{course_info.price}}</span>
+                    </p>
+                    <p class="course-price" v-else>
+                        <span class="discount">¥{{course_info.price}}</span>
                     </p>
                     <div class="buy">
                         <div class="buy-btn">
@@ -45,7 +51,7 @@
                     <li :class="tabIndex==1?'active':''" @click="tabIndex=1">详情介绍</li>
                     <li :class="tabIndex==2?'active':''" @click="tabIndex=2">课程章节 <span :class="tabIndex!=2?'free':''">(试学)</span>
                     </li>
-                    <li :class="tabIndex==3?'active':''" @click="tabIndex=3">学生评论 ({{comment_list.length}})</li>
+                    <li :class="tabIndex==3?'active':''" @click="get_comment_list">学生评论 ({{comment_length}})</li>
                     <li :class="tabIndex==4?'active':''" @click="tabIndex=4">常见问题</li>
                 </ul>
             </div>
@@ -79,16 +85,19 @@
                         用户评论:
                         <hr>
                         <div v-for="(comment,index) in comment_list" :key="index">
-                            <span style="line-height: 20px">第{{index+1}}条评论：</span>
-                            <el-link type="danger" @click="del_user_comment(index)" style="float: right">删除</el-link>
-                            <br>
-                            <span style="line-height: 20px">{{comment}}</span>
+                            <p style="line-height: 30px;font-size: 20px">{{comment.username}}：</p>
+                            <p style="line-height: 20px;text-indent: 2em">{{comment.content}}
+                                <el-link type="danger" @click="del_user_comment(index,comment.comment_timestamp)"
+                                         style="float: right"
+                                         v-if="comment.user_id===user_id">删除
+                                </el-link>
+                            </p>
                         </div>
-                        <div style="margin-right: 21px">
+                        <div style="margin-right: 21px" v-if="is_publish_comment">
                             <el-input
                                 type="textarea"
                                 autosize
-                                placeholder="请输入内容"
+                                placeholder="发表评论"
                                 maxlength=150
                                 v-model="textarea1"
                                 style="margin-bottom: 8px">
@@ -96,6 +105,11 @@
                             <el-button type="primary" style="float: right" @click="add_user_comment">发表</el-button>
                             <el-button type="danger" style="float: right" @click="textarea1=''">清空</el-button>
                         </div>
+                        <div style="margin-top: 19px" v-else>
+                            <el-button type="primary" style="float: right" @click="is_publish_comment=true">评论
+                            </el-button>
+                        </div>
+
                     </div>
                     <div v-if="tabIndex==4">
                         常见问题:
@@ -151,8 +165,13 @@
         data() {
             return {
                 tabIndex: 2,
-                comment_list: localStorage.comment_list ? JSON.parse(localStorage.comment_list) : [],
+                course_id: 0,
+                user_id: this.$cookies.get('user_id') ? this.$cookies.get('user_id') : 0,
+                comment_list: [],
+                comment_length: 0,
                 common_problem_list: localStorage.common_problem_list ? JSON.parse(localStorage.common_problem_list) : [],
+                is_publish_comment: false,
+                reply_comment: false,
                 course_info: {
                     teacher: {}
                 },
@@ -182,9 +201,22 @@
             get_course_info(id) {
                 this.$axios.get(`${this.$settings.HOST}course/course_info/${id}/`).then(res => {
                     this.course_info = res.data
+                    this.comment_length = res.data.comment_length
+
+                    //设置播放视频的连接
                     this.playerOptions.sources[0].src = res.data.course_video
+                    //设置视频的封面
                     this.playerOptions.poster = res.data.course_img
+
                     // console.log(this.course_info)
+
+                    if (this.course_info.active_time > 0) {
+                        let time = setInterval(() => {
+                            if (this.course_info.active_time > 1) {
+                                this.course_info.active_time--
+                            }
+                        }, 1000)
+                    }
                 }).catch(error => {
                     this.$message.error("出现错误啦，请刷新页面")
                 })
@@ -215,7 +247,7 @@
                     // console.log()
                     this.$store.commit('get_cart_length', res.data.cart_length)
                     this.$message.success(res.data.message)
-                }).catch(error=>{
+                }).catch(error => {
                     this.$message.error(error.response.data.message)
                 })
             },
@@ -239,18 +271,72 @@
             onPlayerPause(event) {
 
             },
-            add_user_comment() {
-                // console.log(this.comment_list)
-                if (this.textarea1.length > 0) {
-                    this.comment_list.push(this.textarea1)
+            get_comment_list() {
+                this.tabIndex = 3
+                this.$axios.get(`${this.$settings.HOST}course/comment/?course_id=${this.course_id}`).then(res => {
+                    this.comment_list = res.data
                     this.textarea1 = ""
-                    localStorage['comment_list'] = JSON.stringify(this.comment_list)
-
+                }).catch(error => {
+                    this.$message.error(error.response.data.message)
+                })
+            },
+            add_user_comment() {
+                let token = this.check_user_login()
+                if (this.textarea1.length > 0) {
+                    this.$axios.post(`${this.$settings.HOST}course/comment/`, {
+                        'course_id': this.course_id,
+                        'user_id': this.$cookies.get('user_id'),
+                        'content': this.textarea1,
+                    }, {
+                        headers: {
+                            'Authorization': 'jwt ' + token
+                        }
+                    }).then(res => {
+                        // this.$message.success("评论发表成功")
+                        this.comment_list.push({
+                            'user_id': this.$cookies.get('user_id'),
+                            'username': this.$cookies.get('username'),
+                            "content": this.textarea1,
+                            'comment_timestamp': res.data.comment_timestamp
+                        })
+                        this.textarea1 = ""
+                        this.comment_length += 1
+                        // console.log(res.data.comment_timestamp)
+                    }).catch(error => {
+                        this.$message.error(error.response.data.message)
+                    })
                 }
             },
-            del_user_comment(index) {
-                this.comment_list.splice(index, 1)
-                localStorage['comment_list'] = JSON.stringify(this.comment_list)
+            del_user_comment(index, comment_timestamp) {
+                let token = this.check_user_login()
+                this.$confirm('将删除该用户, 是否确定?', '提示', {
+                    confirmButtonText: '确定',
+                    cancelButtonText: '取消',
+                    type: 'warning'
+                }).then(() => {
+                    this.$axios({
+                        url: `${this.$settings.HOST}course/comment/`,
+                        method: 'delete',
+                        headers: {
+                            "Authorization": "jwt " + token
+                        },
+                        data: {
+                            'course_id': this.course_id,
+                            'user_id': this.$cookies.get('user_id'),
+                            'comment_timestamp': comment_timestamp,
+                        },
+                    }).then(res => {
+                        this.comment_list.splice(index, 1)
+                        this.comment_length -= 1
+                    }).catch(error => {
+                        this.$message.error(error.response.data.message)
+                    })
+                }).catch(() => {
+                    this.$message({
+                        type: 'info',
+                        message: '已取消删除'
+                    });
+                });
             },
             add_common_problem() {
                 console.log(this.comment_list)
@@ -277,6 +363,7 @@
                 this.$message.error("对不起访问的页面不存在")
                 this.$router.push('/course')
             }
+            this.course_id = id
             this.get_course_info(id)
             this.get_chapter_info(id)
         },
