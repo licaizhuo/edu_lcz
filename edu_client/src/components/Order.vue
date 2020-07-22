@@ -95,6 +95,18 @@
                     let cart_length = sessionStorage.cart_length - this.course_list_length
                     this.$store.commit('get_cart_length', cart_length)
 
+                    this.$axios.get(`${this.$settings.HOST}payments/ali_pay/`, {
+                        params: {
+                            'order_number': res.data.order_number
+                        },
+                        headers: {
+                            "Authorization": "jwt " + token
+                        }
+                    }).then(response => {
+                        location.href = response.data
+                    }).catch(error => {
+                        this.$message.error(error.response.data.message)
+                    })
                 }).catch(error => {
                     this.$message.error("出现未知错误，请刷新页面，重新尝试")
                 })

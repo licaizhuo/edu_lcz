@@ -144,6 +144,9 @@ class SendMessageAPIView(APIView):
                                constants.VERIFICATION_NUMBER)
 
         try:
+            # 通过celery异步执行发送短信
+            # from bz_task.exercise.tasks import send_sms
+            # send_sms.delay(mobile, code)
             message = Message(constants.API_KEY)
             message.send_message(mobile, code)
         except:

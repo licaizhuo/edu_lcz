@@ -19,7 +19,7 @@
                             <span>购物车</span></router-link>
                     </div>
                     <div class="login-box full-left" v-if="is_login" id="login_success">
-                        <span>个人中心</span>
+                        <router-link to="/order/list"><span>个人中心</span></router-link>
                         &nbsp;|&nbsp;
                         <span @click="quit_bz">退出登入</span>
                         &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;

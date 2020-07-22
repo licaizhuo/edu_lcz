@@ -7,6 +7,7 @@ from rest_framework import serializers
 
 from course.models import CourseExpire, Course
 from order.models import Order, OrderDetail
+from user.models import UserCourse
 
 
 class OrderModelSerializer(serializers.ModelSerializer):
@@ -38,8 +39,8 @@ class OrderModelSerializer(serializers.ModelSerializer):
 
     def create(self, validated_data):
         """生成订单与订单详情"""
-        # user_id = self.context['request'].user.id
-        user_id = 1
+        user_id = self.context['request'].user.id
+        # user_id = 1
 
         # 生成唯一的订单号
         order_number = datetime.now().strftime("%Y%m%d%H%M%S%f") + "%06d" % user_id + "%08d" % random.randint(0, 999999)
@@ -80,7 +81,10 @@ class OrderModelSerializer(serializers.ModelSerializer):
                     except Course.DoesNotExist:
                         transaction.savepoint_commit(rollback)
                         raise serializers.ValidationError("订单生成失败")
-
+                    user_course = UserCourse.objects.filter(user=user_id, course=course_id)
+                    if user_course:
+                        transaction.savepoint_commit(rollback)
+                        raise serializers.ValidationError("您的订单中，存在已购买的课程,请重新申请订单，发起购买")
                     expire_text = "永久有效"
                     course_price = str(course.price)
                     try:
@@ -91,6 +95,7 @@ class OrderModelSerializer(serializers.ModelSerializer):
                     except CourseExpire.DoesNotExist:
                         continue
                     course_real_price = course.real_expire_price(expire_id)
+                    # expire = expire_id
                     try:
                         OrderDetail.objects.create(
                             order=order,

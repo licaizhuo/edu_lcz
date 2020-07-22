@@ -9,6 +9,7 @@ from course.models import Course, CourseExpire
 
 # 获取日志记录器
 from edu_backend.settings import constants
+from user.models import UserCourse
 
 log = logging.getLogger('django')
 
@@ -30,6 +31,9 @@ class CartViewSet(ViewSet):
         user_id = request.user.id
         # 有效期设置为永久有效
         expire_id = 0
+        user_course = UserCourse.objects.filter(user=user_id, course=course_id)
+        if user_course:
+            return Response({"message": "你已经购买过此课程，请勿重复购买"}, status=status.HTTP_400_BAD_REQUEST)
         try:
             # 判断课程id对应的课程是否存在。课程不存在或存在多个都会报错
             Course.objects.get(is_show=True, is_delete=False, pk=course_id)
@@ -192,6 +196,9 @@ class CartViewSet(ViewSet):
                     pipeline.srem('select_%s' % user_id, course_id)
 
                     continue
+                user_course = UserCourse.objects.filter(user=user_id, course=course_id)
+                if user_course:
+                    return Response({"message": "您的购物车中，存在已购买的课程" + course.name}, status=status.HTTP_400_BAD_REQUEST)
                 course_price = str(course.price)
                 expire_text = "永久有效"
                 try:

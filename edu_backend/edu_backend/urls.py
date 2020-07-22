@@ -32,5 +32,6 @@ urlpatterns = [
     path("ckeditor/", include("ckeditor_uploader.urls")),
     path("cart/", include("cart.urls")),
     path("order/", include("order.urls")),
+    path("payments/", include("payments.urls")),
     re_path(r'media/(?P<path>.*)', serve, {'document_root': settings.MEDIA_ROOT})
 ]
