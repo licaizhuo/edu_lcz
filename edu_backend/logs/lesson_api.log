@@ -5657,3 +5657,61 @@ WARNING 2020-07-22 12:05:57,640 base 93 Not Found: /media/course/2.jpeg
 WARNING 2020-07-22 12:05:57,642 basehttp 124 "GET /media/course/2.jpeg HTTP/1.1" 404 1817
 WARNING 2020-07-22 12:07:23,994 base 93 Not Found: /media/course/2.jpeg
 WARNING 2020-07-22 12:07:23,994 basehttp 124 "GET /media/course/2.jpeg HTTP/1.1" 404 1817
+ERROR 2020-07-22 14:35:15,312 exceptions 15 <rest_framework_jwt.views.ObtainJSONWebToken object at 0x000002088059E978>--POST--'NoneType' object has no attribute 'decode'
+ERROR 2020-07-22 14:35:15,314 basehttp 124 "POST /user/login/ HTTP/1.1" 500 67
+WARNING 2020-07-22 14:37:53,318 basehttp 124 "GET /user/captcha/?username=150366691161 HTTP/1.1" 400 29
+WARNING 2020-07-22 14:38:47,558 base 93 Not Found: /media/course/2.jpeg
+WARNING 2020-07-22 14:38:47,560 basehttp 124 "GET /media/course/2.jpeg HTTP/1.1" 404 1817
+WARNING 2020-07-22 14:38:48,769 base 93 Not Found: /media/course/2.jpeg
+WARNING 2020-07-22 14:38:48,770 basehttp 124 "GET /media/course/2.jpeg HTTP/1.1" 404 1817
+WARNING 2020-07-22 14:38:49,956 base 93 Not Found: /media/course/course-cover.jpeg
+WARNING 2020-07-22 14:38:49,959 base 93 Not Found: /media/course/2.jpeg
+WARNING 2020-07-22 14:38:49,959 basehttp 124 "GET /media/course/course-cover.jpeg HTTP/1.1" 404 1850
+WARNING 2020-07-22 14:38:49,960 basehttp 124 "GET /media/course/2.jpeg HTTP/1.1" 404 1817
+WARNING 2020-07-22 14:38:51,552 base 93 Not Found: /media/course/course-cover.jpeg
+WARNING 2020-07-22 14:38:51,558 base 93 Not Found: /media/course/2.jpeg
+WARNING 2020-07-22 14:38:51,560 basehttp 124 "GET /media/course/2.jpeg HTTP/1.1" 404 1817
+WARNING 2020-07-22 14:38:51,566 basehttp 124 "GET /media/course/course-cover.jpeg HTTP/1.1" 404 1850
+WARNING 2020-07-22 14:38:52,172 base 93 Not Found: /media/course/2.jpeg
+WARNING 2020-07-22 14:38:52,173 basehttp 124 "GET /media/course/2.jpeg HTTP/1.1" 404 1817
+WARNING 2020-07-22 14:39:06,020 base 93 Not Found: /media/course/course-cover.jpeg
+WARNING 2020-07-22 14:39:06,024 base 93 Not Found: /media/course/2.jpeg
+WARNING 2020-07-22 14:39:06,026 basehttp 124 "GET /media/course/course-cover.jpeg HTTP/1.1" 404 1850
+WARNING 2020-07-22 14:39:06,027 basehttp 124 "GET /media/course/2.jpeg HTTP/1.1" 404 1817
+ERROR 2020-07-22 14:39:21,897 basehttp 124 "GET /media/video/1.mp4 HTTP/1.1" 500 59
+WARNING 2020-07-22 14:39:57,462 base 93 Not Found: /media/course/2452c9d2-3539-447b-a98a-99378a750dee.png
+WARNING 2020-07-22 14:39:57,463 basehttp 124 "GET /media/course/2452c9d2-3539-447b-a98a-99378a750dee.png HTTP/1.1" 404 1919
+WARNING 2020-07-22 14:39:57,995 base 93 Not Found: /media/course/2.jpeg
+WARNING 2020-07-22 14:39:58,001 basehttp 124 "GET /media/course/2.jpeg HTTP/1.1" 404 1817
+WARNING 2020-07-22 14:39:58,505 base 93 Not Found: /media/course/2.jpeg
+WARNING 2020-07-22 14:39:58,507 basehttp 124 "GET /media/course/2.jpeg HTTP/1.1" 404 1817
+WARNING 2020-07-22 14:39:59,385 base 93 Not Found: /media/course/course-cover.jpeg
+WARNING 2020-07-22 14:39:59,386 basehttp 124 "GET /media/course/course-cover.jpeg HTTP/1.1" 404 1850
+WARNING 2020-07-22 14:40:03,992 base 93 Not Found: /media/course/course-cover.jpeg
+WARNING 2020-07-22 14:40:03,995 base 93 Not Found: /media/course/2.jpeg
+WARNING 2020-07-22 14:40:04,011 basehttp 124 "GET /media/course/2.jpeg HTTP/1.1" 404 1817
+WARNING 2020-07-22 14:40:04,011 basehttp 124 "GET /media/course/course-cover.jpeg HTTP/1.1" 404 1850
+WARNING 2020-07-22 14:40:04,042 base 93 Not Found: /media/course/2452c9d2-3539-447b-a98a-99378a750dee.png
+WARNING 2020-07-22 14:40:04,044 basehttp 124 "GET /media/course/2452c9d2-3539-447b-a98a-99378a750dee.png HTTP/1.1" 404 1919
+WARNING 2020-07-22 14:40:08,092 base 93 Not Found: /media/course/2452c9d2-3539-447b-a98a-99378a750dee.png
+WARNING 2020-07-22 14:40:08,093 basehttp 124 "GET /media/course/2452c9d2-3539-447b-a98a-99378a750dee.png HTTP/1.1" 404 1919
+WARNING 2020-07-22 14:40:10,537 base 93 Not Found: /media/course/2.jpeg
+WARNING 2020-07-22 14:40:10,540 base 93 Not Found: /media/course/course-cover.jpeg
+WARNING 2020-07-22 14:40:10,541 basehttp 124 "GET /media/course/2.jpeg HTTP/1.1" 404 1817
+WARNING 2020-07-22 14:40:10,545 basehttp 124 "GET /media/course/course-cover.jpeg HTTP/1.1" 404 1850
+WARNING 2020-07-22 14:40:45,899 base 93 Not Found: /media/course/course-cover.jpeg
+WARNING 2020-07-22 14:40:45,905 base 93 Not Found: /media/course/2.jpeg
+WARNING 2020-07-22 14:40:45,905 basehttp 124 "GET /media/course/course-cover.jpeg HTTP/1.1" 404 1850
+WARNING 2020-07-22 14:40:45,906 basehttp 124 "GET /media/course/2.jpeg HTTP/1.1" 404 1817
+ERROR 2020-07-22 14:40:48,790 basehttp 124 "GET /media/video/1.mp4 HTTP/1.1" 500 59
+ERROR 2020-07-22 14:41:15,680 basehttp 124 "GET /media/video/1.mp4 HTTP/1.1" 500 59
+WARNING 2020-07-22 14:41:34,902 base 93 Not Found: /media/course/2.jpeg
+WARNING 2020-07-22 14:41:34,904 basehttp 124 "GET /media/course/2.jpeg HTTP/1.1" 404 1817
+WARNING 2020-07-22 14:41:45,669 base 93 Not Found: /media/course/2.jpeg
+WARNING 2020-07-22 14:41:45,671 basehttp 124 "GET /media/course/2.jpeg HTTP/1.1" 404 1817
+WARNING 2020-07-22 14:44:31,418 base 93 Not Found: /media/course/2.jpeg
+WARNING 2020-07-22 14:44:31,422 base 93 Not Found: /media/course/course-cover.jpeg
+WARNING 2020-07-22 14:44:31,422 basehttp 124 "GET /media/course/2.jpeg HTTP/1.1" 404 1817
+WARNING 2020-07-22 14:44:31,423 basehttp 124 "GET /media/course/course-cover.jpeg HTTP/1.1" 404 1850
+ERROR 2020-07-22 14:44:51,323 basehttp 124 "GET /media/video/1.mp4 HTTP/1.1" 500 59
+ERROR 2020-07-22 14:46:21,662 basehttp 124 "GET /media/video/1.mp4 HTTP/1.1" 500 59

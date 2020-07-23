@@ -27,11 +27,11 @@ class OrderApiView(CreateAPIView):
 class OrderListViewSet(ViewSet):
     """获取订单列表"""
 
-    # pagination_class = [IsAuthenticated]
+    pagination_class = [IsAuthenticated]
 
     def get_order_list(self, request):
-        # user_id = request.user.id
-        user_id = 1
+        user_id = request.user.id
+        # user_id = 1
         order_list = Order.objects.filter(user=user_id, is_delete=False)
         data = []
         for order in order_list:
